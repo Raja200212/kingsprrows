@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://kingsparrow.dev/sitemap.xml
+Sitemap: https://www.kingsparrows.in/sitemap.xml

@@ -1,16 +1,135 @@
-import React from 'react';
-import { ArrowRight, BarChart3, ShieldCheck, TrendingUp, Users } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+
+    let width = (canvas.width = canvas.offsetWidth);
+    let height = (canvas.height = canvas.offsetHeight);
+
+    const particles = [];
+    const particleCount = Math.min(40, Math.floor((width * height) / 25000));
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.size = Math.random() * 2 + 1;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(16, 185, 129, 0.4)';
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    const handleResize = () => {
+      if (!canvas) return;
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
+    };
+    window.addEventListener('resize', handleResize);
+
+    const drawConnections = () => {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(16, 185, 129, ${0.12 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+    };
+
+    const animate = () => {
+      ctx.clearRect(0, 0, width, height);
+
+      // Slow moving mesh grid pattern in background
+      ctx.strokeStyle = 'rgba(16, 185, 129, 0.015)';
+      ctx.lineWidth = 0.5;
+      const gridSize = 40;
+      for (let x = 0; x < width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+        ctx.stroke();
+      }
+
+      particles.forEach((p) => {
+        p.update();
+        p.draw();
+      });
+
+      drawConnections();
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <section id="hero" style={{
       padding: '100px 0 60px 0',
       minHeight: '85vh',
       display: 'flex',
       alignItems: 'center',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      position: 'relative'
     }}>
-      <div className="container grid-2" style={{ alignItems: 'center' }}>
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+      />
+      <div className="container grid-2" style={{ alignItems: 'center', position: 'relative', zIndex: 1 }}>
         {/* Left Side: Content */}
         <div className="reveal active" style={{ display: 'flex', flexDirection: 'column', gap: '24px', textAlign: 'left' }}>
           <div className="badge" style={{ alignSelf: 'flex-start' }}>
@@ -34,14 +153,7 @@ export default function Hero() {
           </div>
 
           {/* Stats Bar */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '20px',
-            marginTop: '40px',
-            borderTop: '1px solid rgba(16, 185, 129, 0.15)',
-            paddingTop: '24px'
-          }}>
+          <div className="stats-grid">
             <div>
               <h3 style={{ fontSize: '2rem', color: 'var(--secondary)' }}>99.2%</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Client Retention Rate</p>
@@ -107,47 +219,9 @@ export default function Hero() {
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>live_campaign_analytics.js</span>
             </div>
 
-            {/* Campaign Metrics Grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginBottom: '20px' }}>
-              <div style={{ background: 'rgba(255, 255, 255, 0.55)', borderRadius: '12px', padding: '16px', border: '1px solid rgba(255, 255, 255, 0.8)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--secondary)' }}>
-                  <TrendingUp size={16} />
-                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#10b981' }}>+24.8%</span>
-                </div>
-                <h4 style={{ fontSize: '1.4rem', margin: '4px 0' }}>$14,280</h4>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>GMB & Ads ROI</p>
-              </div>
 
-              <div style={{ background: 'rgba(255, 255, 255, 0.55)', borderRadius: '12px', padding: '16px', border: '1px solid rgba(255, 255, 255, 0.8)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--primary)' }}>
-                  <Users size={16} />
-                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--secondary)' }}>Active</span>
-                </div>
-                <h4 style={{ fontSize: '1.4rem', margin: '4px 0' }}>85,420</h4>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Leads Generated</p>
-              </div>
-            </div>
 
-            {/* Simulated Live Analytics Graph (CSS Bars) */}
-            <div style={{ background: 'rgba(255, 255, 255, 0.4)', borderRadius: '12px', padding: '16px', border: '1px solid rgba(255, 255, 255, 0.6)', marginBottom: '16px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '12px', fontSize: '0.8rem' }}>
-                <span style={{ color: 'var(--text-primary)' }}>Traffic & SEO Growth</span>
-                <span style={{ color: 'var(--secondary)' }}>Domain Authority: 58</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'flex-end', height: '100px', gap: '8px', padding: '0 4px' }}>
-                {[30, 45, 35, 60, 50, 75, 90, 80, 95].map((h, i) => (
-                  <div key={i} style={{
-                    flex: 1,
-                    height: `${h}%`,
-                    background: i === 8 ? 'linear-gradient(to top, var(--secondary), var(--accent))' : 'linear-gradient(to top, var(--primary), var(--accent))',
-                    borderRadius: '4px 4px 0 0',
-                    opacity: 0.85,
-                    transition: 'all 0.5s ease',
-                    boxShadow: i === 8 ? '0 0 10px rgba(16, 185, 129, 0.3)' : 'none'
-                  }} />
-                ))}
-              </div>
-            </div>
+
 
             {/* Status alerts */}
             <div style={{

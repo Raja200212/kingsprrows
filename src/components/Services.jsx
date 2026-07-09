@@ -102,43 +102,16 @@ export default function Services() {
           </p>
 
           {/* Toggle Tabs */}
-          <div style={{
-            display: 'inline-flex',
-            background: 'rgba(255, 255, 255, 0.55)',
-            border: '1px solid rgba(16, 185, 129, 0.15)',
-            padding: '6px',
-            borderRadius: '9999px',
-            marginTop: '32px'
-          }}>
+          <div className="tab-container">
             <button 
               onClick={() => setActiveTab('marketing')}
-              style={{
-                background: activeTab === 'marketing' ? 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)' : 'transparent',
-                color: activeTab === 'marketing' ? '#fff' : 'var(--text-secondary)',
-                border: 'none',
-                padding: '10px 24px',
-                borderRadius: '9999px',
-                cursor: 'pointer',
-                fontFamily: 'var(--heading)',
-                fontWeight: 600,
-                transition: 'all 0.3s'
-              }}
+              className={`tab-button ${activeTab === 'marketing' ? 'active' : ''}`}
             >
               Digital Marketing & Tools
             </button>
             <button 
               onClick={() => setActiveTab('dev')}
-              style={{
-                background: activeTab === 'dev' ? 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)' : 'transparent',
-                color: activeTab === 'dev' ? '#fff' : 'var(--text-secondary)',
-                border: 'none',
-                padding: '10px 24px',
-                borderRadius: '9999px',
-                cursor: 'pointer',
-                fontFamily: 'var(--heading)',
-                fontWeight: 600,
-                transition: 'all 0.3s'
-              }}
+              className={`tab-button ${activeTab === 'dev' ? 'active' : ''}`}
             >
               Websites & Desktop Software
             </button>

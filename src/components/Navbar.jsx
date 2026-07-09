@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Zap } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,15 @@ export default function Navbar() {
           fontWeight: 800,
           fontSize: '1.4rem'
         }}>
-          <Zap size={24} style={{ color: 'var(--primary)', filter: 'drop-shadow(0 0 8px var(--primary))' }} />
+          <img src={logoImg} alt="KingSparrow Emblem" style={{
+            height: '36px',
+            width: '36px',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            border: '1.5px solid rgba(16, 185, 129, 0.4)',
+            boxShadow: '0 0 10px rgba(16, 185, 129, 0.2)'
+          }} />
           <span>King<span className="text-gradient-purple">Sparrow</span></span>
         </a>
 

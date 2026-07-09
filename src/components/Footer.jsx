@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Zap, MessageCircle, X, ChevronRight, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 export default function Footer() {
   const [showChat, setShowChat] = useState(false);
@@ -22,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer style={{
+    <footer id="contact" style={{
       background: 'rgba(255, 255, 255, 0.45)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
@@ -50,8 +51,16 @@ export default function Footer() {
             fontWeight: 800,
             fontSize: '1.3rem'
           }}>
-            <Zap size={22} style={{ color: 'var(--secondary)' }} />
-            <span>King<span className="text-gradient-purple">Sparrow</span></span>
+          <img src={logoImg} alt="KingSparrow Emblem" style={{
+            height: '32px',
+            width: '32px',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            border: '1px solid rgba(16, 185, 129, 0.4)',
+            boxShadow: '0 0 10px rgba(16, 185, 129, 0.15)'
+          }} />
+          <span>King<span className="text-gradient-purple">Sparrow</span></span>
           </a>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
             Empowering modern businesses with high-converting SEO marketing campaigns, WhatsApp broadcast software, and custom desktop and mobile-responsive website portals.
@@ -84,10 +93,10 @@ export default function Footer() {
         {/* Col 4: Contact */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '4px' }}>Get In Touch</h4>
-          <div style={contactItemStyle}><Mail size={14} style={{ color: 'var(--primary)' }} /> <span>support@kingsparrow.dev</span></div>
+          <div style={contactItemStyle}><Mail size={14} style={{ color: 'var(--primary)' }} /> <span>contact.kingsparrow@gmail.com</span></div>
           <div style={contactItemStyle}><Phone size={14} style={{ color: 'var(--secondary)' }} /> <span>+91 89039 59381</span></div>
           <div style={contactItemStyle}><MapPin size={14} style={{ color: '#ef4444' }} /> <span>Dindigul Bypass Road, Tamil Nadu, India</span></div>
-          <div style={contactItemStyle}><Globe size={14} style={{ color: 'var(--text-muted)' }} /> <span>www.kingsparrow.dev</span></div>
+          <div style={contactItemStyle}><Globe size={14} style={{ color: 'var(--text-muted)' }} /> <span>www.kingsparrows.in</span></div>
         </div>
 
       </div>
