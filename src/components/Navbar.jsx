@@ -70,6 +70,8 @@ export default function Navbar() {
             display: 'block'
           }}
           className="mobile-toggle-btn"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

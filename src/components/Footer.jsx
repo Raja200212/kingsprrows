@@ -85,8 +85,8 @@ export default function Footer() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '4px' }}>Get In Touch</h4>
           <div style={contactItemStyle}><Mail size={14} style={{ color: 'var(--primary)' }} /> <span>support@kingsparrow.dev</span></div>
-          <div style={contactItemStyle}><Phone size={14} style={{ color: 'var(--secondary)' }} /> <span>+1 (800) 555-SPARROW</span></div>
-          <div style={contactItemStyle}><MapPin size={14} style={{ color: '#ef4444' }} /> <span>Silicon Valley Office, Suite 400</span></div>
+          <div style={contactItemStyle}><Phone size={14} style={{ color: 'var(--secondary)' }} /> <span>+91 800 555 7727</span></div>
+          <div style={contactItemStyle}><MapPin size={14} style={{ color: '#ef4444' }} /> <span>Dindigul Bypass Road, Tamil Nadu, India</span></div>
           <div style={contactItemStyle}><Globe size={14} style={{ color: 'var(--text-muted)' }} /> <span>www.kingsparrow.dev</span></div>
         </div>
 
@@ -136,6 +136,7 @@ export default function Footer() {
             transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
           }}
           className="whatsapp-float-btn"
+          aria-label="Open WhatsApp Chat Support"
         >
           {showChat ? <X size={26} /> : <MessageCircle size={26} />}
         </button>
@@ -257,6 +258,7 @@ export default function Footer() {
                   outline: 'none',
                   fontSize: '0.8rem'
                 }}
+                aria-label="Type your project description"
               />
               <button type="submit" style={{
                 background: '#25d366',
