@@ -162,100 +162,60 @@
 
 <body>
 
-  <!-- SEO Fallback -->
-  <header>
-
-    <nav>
-
-      <a href="/">Home</a>
-
-      <a href="/about">About</a>
-
-      <a href="/services">Services</a>
-
-      <a href="/pricing">Pricing</a>
-
-      <a href="/portfolio">Portfolio</a>
-
-      <a href="/contact">Contact</a>
-
-    </nav>
-
-  </header>
-
-  <main>
-
-    <article>
-
-      <h1>
-        Best Digital Marketing Company in Dindigul
-      </h1>
-
-      <p>
-        KingSparrow helps businesses grow with professional SEO,
-        Social Media Marketing, Google Business Profile Optimization,
-        Website Development, React Applications, WhatsApp Marketing,
-        Email Marketing and Custom Software Development.
-      </p>
-
-      <section>
-
-        <h2>Our Services</h2>
-
-        <ul>
-
-          <li>Search Engine Optimization (SEO)</li>
-
-          <li>Social Media Marketing</li>
-
-          <li>Google Business Profile Optimization</li>
-
-          <li>Website Development</li>
-
-          <li>React Website Development</li>
-
-          <li>React Desktop Applications</li>
-
-          <li>E-Commerce Website Development</li>
-
-          <li>WhatsApp Marketing Software</li>
-
-          <li>Email Marketing</li>
-
-          <li>Custom Business Software</li>
-
-        </ul>
-
-      </section>
-
-      <section>
-
-        <h2>Why Choose KingSparrow?</h2>
-
-        <ul>
-
-          <li>Experienced Digital Marketing Team</li>
-
-          <li>Affordable Pricing</li>
-
-          <li>Fast Website Development</li>
-
-          <li>Local SEO Experts</li>
-
-          <li>Custom Software Solutions</li>
-
-          <li>100% Customer Support</li>
-
-        </ul>
-
-      </section>
-
-    </article>
-
-  </main>
-
   <!-- React App -->
-  <div id="root"></div>
+  <div id="root">
+    <!-- SEO Fallback: React will hydration-overwrite this content upon execution -->
+    <header style="display: none;">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <main style="display: none;">
+      <article>
+        <h1>Best Digital Marketing Company in Dindigul</h1>
+        <p>
+          KingSparrow helps businesses grow with professional SEO,
+          Social Media Marketing, Google Business Profile Optimization,
+          Website Development, React Applications, WhatsApp Marketing,
+          Email Marketing and Custom Software Development.
+        </p>
+
+        <section>
+          <h2>Our Services</h2>
+          <ul>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Social Media Marketing</li>
+            <li>Google Business Profile Optimization</li>
+            <li>Website Development</li>
+            <li>React Website Development</li>
+            <li>React Desktop Applications</li>
+            <li>E-Commerce Website Development</li>
+            <li>WhatsApp Marketing Software</li>
+            <li>Email Marketing</li>
+            <li>Custom Business Software</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why Choose KingSparrow?</h2>
+          <ul>
+            <li>Experienced Digital Marketing Team</li>
+            <li>Affordable Pricing</li>
+            <li>Fast Website Development</li>
+            <li>Local SEO Experts</li>
+            <li>Custom Software Solutions</li>
+            <li>100% Customer Support</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </div>
 
   <script type="module" src="/src/main.jsx"></script>
 
