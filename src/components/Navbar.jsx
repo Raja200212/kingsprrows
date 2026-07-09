@@ -61,6 +61,7 @@ export default function Navbar() {
           gap: '24px',
           alignItems: 'center'
         }} className="desktop-nav">
+          <Link to="/" style={linkStyle}>Home</Link>
           <Link to="/services" style={linkStyle}>Services</Link>
           <Link to="/pricing" style={linkStyle}>Pricing</Link>
           <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
@@ -105,6 +106,7 @@ export default function Navbar() {
           gap: '16px',
           zIndex: 99
         }}>
+          <Link to="/" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Home</Link>
           <Link to="/services" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Services</Link>
           <Link to="/pricing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Pricing</Link>
           <Link to="/portfolio" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Portfolio</Link>
