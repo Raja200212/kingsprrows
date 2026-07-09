@@ -85,7 +85,7 @@ export default function Footer() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '4px' }}>Get In Touch</h4>
           <div style={contactItemStyle}><Mail size={14} style={{ color: 'var(--primary)' }} /> <span>support@kingsparrow.dev</span></div>
-          <div style={contactItemStyle}><Phone size={14} style={{ color: 'var(--secondary)' }} /> <span>+91 800 555 7727</span></div>
+          <div style={contactItemStyle}><Phone size={14} style={{ color: 'var(--secondary)' }} /> <span>+91 89039 59381</span></div>
           <div style={contactItemStyle}><MapPin size={14} style={{ color: '#ef4444' }} /> <span>Dindigul Bypass Road, Tamil Nadu, India</span></div>
           <div style={contactItemStyle}><Globe size={14} style={{ color: 'var(--text-muted)' }} /> <span>www.kingsparrow.dev</span></div>
         </div>
