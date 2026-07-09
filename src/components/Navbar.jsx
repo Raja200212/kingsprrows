@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Zap } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo.png';
 
 export default function Navbar() {
@@ -32,7 +33,7 @@ export default function Navbar() {
         alignItems: 'center'
       }}>
         {/* Logo */}
-        <a href="#" style={{
+        <Link to="/" style={{
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
@@ -52,19 +53,22 @@ export default function Navbar() {
             boxShadow: '0 0 10px rgba(16, 185, 129, 0.2)'
           }} />
           <span>King<span className="text-gradient-purple">Sparrow</span></span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <nav style={{
           display: 'none',
-          gap: '32px',
+          gap: '24px',
           alignItems: 'center'
         }} className="desktop-nav">
-          <a href="#services" style={linkStyle}>Services</a>
-          <a href="#pricing" style={linkStyle}>Pricing</a>
-          <a href="#contact" className="btn btn-secondary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
+          <Link to="/services" style={linkStyle}>Services</Link>
+          <Link to="/pricing" style={linkStyle}>Pricing</Link>
+          <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
+          <Link to="/blog" style={linkStyle}>Blog</Link>
+          <Link to="/about" style={linkStyle}>About</Link>
+          <Link to="/contact" className="btn btn-secondary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
             Get Quote
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Action Button */}
@@ -101,11 +105,14 @@ export default function Navbar() {
           gap: '16px',
           zIndex: 99
         }}>
-          <a href="#services" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Services</a>
-          <a href="#pricing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Pricing</a>
-          <a href="#contact" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%' }}>
+          <Link to="/services" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Services</Link>
+          <Link to="/pricing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Pricing</Link>
+          <Link to="/portfolio" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Portfolio</Link>
+          <Link to="/blog" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Blog</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%' }}>
             Get Quote <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       )}
 

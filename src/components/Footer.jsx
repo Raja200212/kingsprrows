@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Send, Zap, MessageCircle, X, ChevronRight, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import logoImg from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const [showChat, setShowChat] = useState(false);
@@ -41,12 +42,12 @@ export default function Footer() {
         
         {/* Col 1: About */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <a href="#" style={{
+          <Link to="/" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
             textDecoration: 'none',
-            color: '#fff',
+            color: 'var(--text-primary)',
             fontFamily: 'var(--heading)',
             fontWeight: 800,
             fontSize: '1.3rem'
@@ -61,7 +62,7 @@ export default function Footer() {
             boxShadow: '0 0 10px rgba(16, 185, 129, 0.15)'
           }} />
           <span>King<span className="text-gradient-purple">Sparrow</span></span>
-          </a>
+          </Link>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
             Empowering modern businesses with high-converting SEO marketing campaigns, WhatsApp broadcast software, and custom desktop and mobile-responsive website portals.
           </p>
@@ -71,10 +72,10 @@ export default function Footer() {
         <div>
           <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '16px' }}>Services</h4>
           <ul style={listStyle}>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> Search Engine Optimization</a></li>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> Social Media Marketing</a></li>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> Google My Business SEO</a></li>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> Lead Gen Campaigns</a></li>
+            <li><Link to="/seo-services" style={linkStyle}><ChevronRight size={12} /> Search Engine Optimization</Link></li>
+            <li><Link to="/social-media-marketing" style={linkStyle}><ChevronRight size={12} /> Social Media Marketing</Link></li>
+            <li><Link to="/google-business-profile" style={linkStyle}><ChevronRight size={12} /> Google My Business SEO</Link></li>
+            <li><Link to="/services" style={linkStyle}><ChevronRight size={12} /> Lead Gen Campaigns</Link></li>
           </ul>
         </div>
 
@@ -82,11 +83,11 @@ export default function Footer() {
         <div>
           <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: '16px' }}>Specialist Products</h4>
           <ul style={listStyle}>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> WhatsApp Broadcaster</a></li>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> Email ROI Planner</a></li>
-            <li><a href="#pricing" style={linkStyle}><ChevronRight size={12} /> Live Budget Estimator</a></li>
-            <li><a href="#services" style={linkStyle}><ChevronRight size={12} /> React Web Applications</a></li>
-            <li><a href="#pricing" style={linkStyle}><ChevronRight size={12} /> Pricing Plans</a></li>
+            <li><Link to="/whatsapp-marketing" style={linkStyle}><ChevronRight size={12} /> WhatsApp Broadcaster</Link></li>
+            <li><Link to="/services" style={linkStyle}><ChevronRight size={12} /> Email ROI Planner</Link></li>
+            <li><Link to="/pricing" style={linkStyle}><ChevronRight size={12} /> Live Budget Estimator</Link></li>
+            <li><Link to="/web-development" style={linkStyle}><ChevronRight size={12} /> React Web Applications</Link></li>
+            <li><Link to="/pricing" style={linkStyle}><ChevronRight size={12} /> Pricing Plans</Link></li>
           </ul>
         </div>
 

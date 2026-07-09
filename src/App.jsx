@@ -1,27 +1,42 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Pricing from './components/Pricing';
 import Footer from './components/Footer';
-import ScrollReveal from './components/ScrollReveal';
 
-function App() {
-  // Intersection Observer for Reveal Scroll Animations
+// Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import ServicesPage from './pages/ServicesPage';
+import PricingPage from './pages/PricingPage';
+import PortfolioPage from './pages/PortfolioPage';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import SeoServices from './pages/SeoServices';
+import SocialMarketing from './pages/SocialMarketing';
+import GoogleBusiness from './pages/GoogleBusiness';
+import WebDevelopment from './pages/WebDevelopment';
+import WhatsappMarketing from './pages/WhatsappMarketing';
+import BlogDetail from './pages/BlogDetail';
+
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
   useEffect(() => {
+    window.scrollTo(0, 0);
+
+    // Re-initialize intersection observers for scrolled elements
     const revealElements = document.querySelectorAll('.reveal');
-    
     const observerOptions = {
-      root: null, // viewport
-      threshold: 0.15, // Trigger when 15% of the element is visible
-      rootMargin: '0px 0px -50px 0px' // Offset trigger point slightly
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
     };
 
     const revealCallback = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // Once animated, we don't need to observe it again
           observer.unobserve(entry.target);
         }
       });
@@ -33,10 +48,16 @@ function App() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
+  return null;
+}
+
+function App() {
   return (
-    <>
+    <Router>
+      <ScrollToTop />
+      
       {/* Liquid Background Blobs */}
       <div className="liquid-blob-container">
         <div className="liquid-blob blob-1"></div>
@@ -48,48 +69,27 @@ function App() {
       <Navbar />
 
       {/* Main Content Sections */}
-      <main>
-        {/* Hero Landing */}
-        <Hero />
-
-        {/* Brand Vision Reveal Section */}
-        <section style={{
-          padding: '120px 0',
-          background: 'rgba(16, 185, 129, 0.02)',
-          borderTop: '1px solid rgba(16, 185, 129, 0.1)',
-          position: 'relative',
-          overflow: 'hidden'
-        }}>
-          <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
-            <ScrollReveal
-              baseOpacity={0.1}
-              enableBlur={true}
-              baseRotation={4}
-              blurStrength={10}
-              textClassName="text-gradient"
-            >
-              At KingSparrow, we engineer high-converting digital pipelines. We combine high-intent SEO, automated marketing tools, and premium custom software development to multiply your revenue and scale your brand.
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* Services Showcase (SEO, SMM, Web/App Dev) */}
-        <div className="reveal" id="services-section">
-          <Services />
-        </div>
-
-
-
-        {/* Pricing Packages */}
-        <div className="reveal" id="pricing-section">
-          <Pricing />
-        </div>
-
+      <main style={{ flexGrow: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/seo-services" element={<SeoServices />} />
+          <Route path="/social-media-marketing" element={<SocialMarketing />} />
+          <Route path="/google-business-profile" element={<GoogleBusiness />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/whatsapp-marketing" element={<WhatsappMarketing />} />
+        </Routes>
       </main>
 
       {/* Professional Footer & Floating WhatsApp Chat Widget */}
       <Footer />
-    </>
+    </Router>
   );
 }
 
