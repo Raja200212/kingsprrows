@@ -58,8 +58,7 @@ export default function Navbar() {
         <nav style={{
           display: 'none',
           gap: '32px',
-          alignItems: 'center',
-          '@media (min-width: 768px)': { display: 'flex' }
+          alignItems: 'center'
         }} className="desktop-nav">
           <a href="#services" style={linkStyle}>Services</a>
           <a href="#pricing" style={linkStyle}>Pricing</a>
