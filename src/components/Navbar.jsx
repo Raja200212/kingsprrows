@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoImg from '../assets/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,8 +16,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!moreOpen) return;
+    const handleClose = () => setMoreOpen(false);
+    window.addEventListener('click', handleClose);
+    return () => window.removeEventListener('click', handleClose);
+  }, [moreOpen]);
+
   return (
-    <header style={{
+    <header className={scrolled ? 'header-scrolled' : ''} style={{
       position: 'sticky',
       top: 0,
       zIndex: 100,
@@ -25,7 +33,7 @@ export default function Navbar() {
       WebkitBackdropFilter: 'blur(16px)',
       borderBottom: '1px solid rgba(13, 34, 64, 0.08)',
       transition: 'all 0.3s ease',
-      padding: '12px 0'
+      padding: scrolled ? '8px 0' : '12px 0'
     }}>
       <div className="container" style={{
         display: 'flex',
@@ -36,32 +44,78 @@ export default function Navbar() {
         <Link to="/" style={{
           display: 'flex',
           alignItems: 'center',
-          textDecoration: 'none'
+          textDecoration: 'none',
+          gap: '10px'
         }}>
-          <img src={logoImg} alt="KingSparrow Logo" style={{
-            height: '55px',
-            width: 'auto',
-            objectFit: 'contain'
-          }} />
+          <img src={logoImg} alt="KingSparrow Logo" className="header-logo" />
+          <span style={{
+            fontSize: '1.3rem',
+            fontWeight: 800,
+            fontFamily: 'var(--heading)',
+            color: 'var(--text-primary)',
+            letterSpacing: '-0.02em',
+            display: 'flex',
+            alignItems: 'center'
+          }}>
+            King<span className="text-gradient-purple">Sparrow</span>
+          </span>
         </Link>
 
-        {/* Desktop Links */}
         <nav style={{
           display: 'none',
-          gap: '24px',
+          gap: '32px',
           alignItems: 'center'
         }} className="desktop-nav">
           <Link to="/" style={linkStyle}>Home</Link>
-          <Link to="/about" style={linkStyle}>About Us</Link>
+          <Link to="/about" style={linkStyle}>About</Link>
           <Link to="/services" style={linkStyle}>Services</Link>
-          <Link to="/case-studies" style={linkStyle}>Case Studies</Link>
-          <Link to="/industries" style={linkStyle}>Industries</Link>
+          <Link to="/portfolio" style={linkStyle}>Our Work</Link>
           <Link to="/pricing" style={linkStyle}>Pricing</Link>
-          <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
-          <Link to="/blog" style={linkStyle}>Blog</Link>
 
-          <Link to="/contact" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
-            Get In Touch <ArrowRight size={14} />
+          {/* More Dropdown */}
+          <div style={{ position: 'relative' }}>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setMoreOpen(!moreOpen); }}
+              style={{
+                ...linkStyle,
+                background: 'none',
+                border: 'none',
+                padding: 0,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                cursor: 'pointer'
+              }}
+            >
+              More <ChevronDown size={14} style={{ transform: moreOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+            </button>
+
+            {moreOpen && (
+              <div style={{
+                position: 'absolute',
+                top: '100%',
+                right: 0,
+                marginTop: '12px',
+                background: 'rgba(255, 255, 255, 0.98)',
+                backdropFilter: 'blur(16px)',
+                border: '1px solid rgba(13, 34, 64, 0.08)',
+                boxShadow: '0 10px 25px rgba(13, 34, 64, 0.08)',
+                borderRadius: '12px',
+                padding: '12px 0',
+                display: 'flex',
+                flexDirection: 'column',
+                minWidth: '160px',
+                zIndex: 10
+              }}>
+                <Link to="/case-studies" onClick={() => setMoreOpen(false)} className="dropdown-link">Case Studies</Link>
+                <Link to="/industries" onClick={() => setMoreOpen(false)} className="dropdown-link">Industries</Link>
+                <Link to="/blog" onClick={() => setMoreOpen(false)} className="dropdown-link">Blog</Link>
+              </div>
+            )}
+          </div>
+
+          <Link to="/contact" className="btn btn-primary" style={{ padding: '8.5px 22px', fontSize: '0.9rem', fontWeight: '700' }}>
+            Book Strategy Call <ArrowRight size={14} />
           </Link>
         </nav>
 
@@ -90,9 +144,10 @@ export default function Navbar() {
           top: '100%',
           left: 0,
           right: 0,
-          background: 'rgba(255, 255, 255, 0.85)',
+          background: 'rgba(255, 255, 255, 0.98)',
           backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.5)',
+          borderBottom: '1px solid rgba(13, 34, 64, 0.08)',
+          boxShadow: '0 15px 30px rgba(13, 34, 64, 0.08)',
           padding: '24px',
           display: 'flex',
           flexDirection: 'column',
@@ -121,12 +176,48 @@ export default function Navbar() {
         .mobile-toggle-btn {
           display: block !important;
         }
+        .header-logo {
+          height: 42px;
+          width: auto;
+          object-fit: contain;
+          transition: height 0.3s ease;
+        }
+        .header-scrolled .header-logo {
+          height: 36px;
+        }
+        .dropdown-link {
+          color: var(--text-secondary);
+          text-decoration: none;
+          font-size: 0.9rem;
+          font-weight: 500;
+          padding: 8px 20px;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          display: block;
+          text-align: left;
+        }
+        .dropdown-link:hover {
+          background: rgba(184, 144, 71, 0.08);
+          color: var(--primary);
+        }
+        .desktop-nav a, .desktop-nav button {
+          transition: color 0.2s ease;
+        }
+        .desktop-nav a:hover, .desktop-nav button:hover {
+          color: var(--primary) !important;
+        }
         @media (min-width: 768px) {
           .desktop-nav {
             display: flex !important;
           }
           .mobile-toggle-btn {
             display: none !important;
+          }
+          .header-logo {
+            height: 55px;
+          }
+          .header-scrolled .header-logo {
+            height: 46px;
           }
         }
       `}</style>
@@ -135,10 +226,10 @@ export default function Navbar() {
 }
 
 const linkStyle = {
-  color: 'var(--text-secondary)',
+  color: 'var(--text-primary)',
   textDecoration: 'none',
-  fontSize: '0.95rem',
-  fontWeight: '500',
+  fontSize: '1.05rem',
+  fontWeight: '700',
   transition: 'color 0.2s ease',
   cursor: 'pointer',
 };

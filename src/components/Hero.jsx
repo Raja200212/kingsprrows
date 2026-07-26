@@ -585,6 +585,9 @@ export default function Hero() {
           50% { transform: translateY(-6px) scale(1.02); }
         }
         @media (max-width: 768px) {
+          .floating-badge {
+            display: none !important;
+          }
           .trusted-title {
             border-right: none !important;
             padding-right: 0 !important;

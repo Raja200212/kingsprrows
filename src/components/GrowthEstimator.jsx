@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, ArrowRight, ArrowLeft, Send, BarChart4 } from 'lucide-react';
+import { Check, ArrowRight, ArrowLeft, Send, BarChart4, Search, Share2, MapPin, MessageSquare, Mail, Layout, Monitor, Palette } from 'lucide-react';
 
 export default function GrowthEstimator() {
   const [step, setStep] = useState(1);
@@ -13,13 +13,14 @@ export default function GrowthEstimator() {
   const [submitted, setSubmitted] = useState(false);
 
   const servicesList = [
-    { id: 'seo', name: 'SEO & Search Rankings', multiplier: 1.2 },
-    { id: 'smm', name: 'Social Media Marketing (SMM)', multiplier: 1.15 },
-    { id: 'gmb', name: 'Google My Business (GMB)', multiplier: 1.1 },
-    { id: 'whatsapp', name: 'WhatsApp Automation Panel', multiplier: 1.3 },
-    { id: 'email', name: 'Email Campaign Setup', multiplier: 1.25 },
-    { id: 'webapp', name: 'Custom React Web/App Dev', multiplier: 1.4 },
-    { id: 'desktop', name: 'Desktop Software System', multiplier: 1.35 }
+    { id: 'seo', name: 'SEO & Rankings', multiplier: 1.2, icon: <Search size={22} />, price: '₹7,000+/mo' },
+    { id: 'smm', name: 'Social Media', multiplier: 1.15, icon: <Share2 size={22} />, price: '₹5,000+/mo' },
+    { id: 'gmb', name: 'Google Business', multiplier: 1.1, icon: <MapPin size={22} />, price: '₹1,500+' },
+    { id: 'whatsapp', name: 'WhatsApp Panel', multiplier: 1.3, icon: <MessageSquare size={22} />, price: '₹2,500+' },
+    { id: 'email', name: 'Email Campaigns', multiplier: 1.25, icon: <Mail size={22} />, price: '₹2,000+' },
+    { id: 'webapp', name: 'React Web/App', multiplier: 1.4, icon: <Layout size={22} />, price: '₹2,500+' },
+    { id: 'desktop', name: 'Desktop Systems', multiplier: 1.35, icon: <Monitor size={22} />, price: '₹15,000+' },
+    { id: 'branding', name: 'Brand & Logo', multiplier: 1.2, icon: <Palette size={22} />, price: '₹500+' }
   ];
 
   const handleServiceToggle = (id) => {
@@ -157,42 +158,86 @@ export default function GrowthEstimator() {
               {/* STEP 1: SERVICE CHOICE */}
               {step === 1 && (
                 <div>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '16px' }}>Step 1: Choose Your Growth Channels</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Step 1: Choose Your Growth Channels</h3>
+                  <div className="estimator-services-grid" style={{ marginBottom: '24px' }}>
                     {servicesList.map((srv) => {
                       const isSelected = selectedServices.includes(srv.id);
                       return (
                         <div 
                           key={srv.id} 
                           onClick={() => handleServiceToggle(srv.id)}
+                          className="estimator-card"
                           style={{
                             display: 'flex',
+                            flexDirection: 'column',
                             alignItems: 'center',
-                            justifyContent: 'space-between',
-                            padding: '14px 20px',
-                            borderRadius: '10px',
+                            justifyContent: 'center',
+                            padding: '20px 12px',
+                            borderRadius: '14px',
                             background: isSelected ? 'rgba(184, 144, 71, 0.08)' : 'rgba(255, 255, 255, 0.45)',
-                            border: `1px solid ${isSelected ? 'var(--primary)' : 'rgba(184, 144, 71, 0.15)'}`,
+                            border: `2px solid ${isSelected ? 'var(--primary)' : 'rgba(184, 144, 71, 0.08)'}`,
                             cursor: 'pointer',
-                            transition: 'all 0.2s'
+                            transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                            textAlign: 'center',
+                            gap: '10px',
+                            position: 'relative',
+                            boxShadow: isSelected ? '0 10px 20px rgba(184, 144, 71, 0.1)' : '0 4px 10px rgba(0, 0, 0, 0.02)'
                           }}
                         >
-                          <span style={{ fontWeight: 500, color: isSelected ? 'var(--secondary)' : 'var(--text-secondary)' }}>
-                            {srv.name}
-                          </span>
+                          {/* Checkbox badge */}
                           <div style={{
-                            width: '20px',
-                            height: '20px',
-                            borderRadius: '4px',
-                            border: '1px solid rgba(184, 144, 71, 0.35)',
+                            position: 'absolute',
+                            top: '8px',
+                            right: '8px',
+                            width: '18px',
+                            height: '18px',
+                            borderRadius: '50%',
+                            border: `1.5px solid ${isSelected ? 'var(--primary)' : 'rgba(184, 144, 71, 0.3)'}`,
                             background: isSelected ? 'var(--primary)' : 'transparent',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            color: '#fff'
+                            color: '#fff',
+                            transition: 'all 0.2s'
                           }}>
-                            {isSelected && <Check size={14} />}
+                            {isSelected && <Check size={10} />}
                           </div>
+
+                          {/* Icon */}
+                          <div style={{
+                            color: isSelected ? 'var(--primary)' : 'var(--text-muted)',
+                            background: isSelected ? 'rgba(184, 144, 71, 0.12)' : 'rgba(13, 34, 64, 0.03)',
+                            padding: '10px',
+                            borderRadius: '10px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            transition: 'all 0.3s'
+                          }}>
+                            {srv.icon}
+                          </div>
+
+                          <span style={{ 
+                            fontWeight: 600, 
+                            fontSize: '0.8rem',
+                            lineHeight: '1.2',
+                            color: isSelected ? 'var(--text-primary)' : 'var(--text-secondary)' 
+                          }}>
+                            {srv.name}
+                          </span>
+
+                          <span style={{
+                            fontSize: '0.7rem',
+                            fontWeight: '700',
+                            color: isSelected ? 'var(--primary)' : 'var(--text-muted)',
+                            background: isSelected ? 'rgba(184, 144, 71, 0.08)' : 'rgba(13, 34, 64, 0.02)',
+                            padding: '3px 8px',
+                            borderRadius: '6px',
+                            marginTop: '2px',
+                            display: 'inline-block'
+                          }}>
+                            {srv.price}
+                          </span>
                         </div>
                       );
                     })}
@@ -254,12 +299,7 @@ export default function GrowthEstimator() {
                   <h3 style={{ fontSize: '1.25rem', marginBottom: '16px', color: 'var(--text-primary)' }}>Step 3: Your Performance Forecast</h3>
 
                   {/* Calculations breakdown */}
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(3, 1fr)',
-                    gap: '16px',
-                    marginBottom: '28px'
-                  }}>
+                  <div className="estimator-results-grid" style={{ marginBottom: '28px' }}>
                     <div style={resultCardStyle}>
                       <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Estimated Monthly Visits</span>
                       <strong style={{ fontSize: '1.6rem', color: 'var(--text-primary)' }}>{estimatedClicks.toLocaleString()}</strong>
@@ -287,7 +327,7 @@ export default function GrowthEstimator() {
                     flexDirection: 'column',
                     gap: '16px'
                   }}>
-                    <div style={{ display: 'flex', gap: '16px' }}>
+                    <div className="form-row" style={{ gap: '16px' }}>
                       <div style={{ flex: 1 }}>
                         <label style={labelStyle}>Your Name</label>
                         <input 
@@ -309,7 +349,7 @@ export default function GrowthEstimator() {
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '16px' }}>
+                    <div className="form-row" style={{ gap: '16px' }}>
                       <div style={{ flex: 1 }}>
                         <label style={labelStyle}>Email Address</label>
                         <input 
@@ -348,6 +388,42 @@ export default function GrowthEstimator() {
           )}
         </div>
       </div>
+
+      <style>{`
+        .estimator-services-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .estimator-card:hover {
+          transform: translateY(-4px);
+          border-color: rgba(184, 144, 71, 0.5) !important;
+          box-shadow: 0 12px 24px rgba(184, 144, 71, 0.08) !important;
+        }
+        .estimator-results-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .form-row {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+        @media (min-width: 580px) {
+          .estimator-results-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          .form-row {
+            flex-direction: row;
+          }
+        }
+        @media (min-width: 768px) {
+          .estimator-services-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+      `}</style>
     </section>
   );
 }
