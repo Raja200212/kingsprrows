@@ -117,12 +117,12 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" style={{ padding: '80px 0', borderTop: '1px solid rgba(16, 185, 129, 0.15)', position: 'relative' }}>
+    <section id="pricing" style={{ padding: '80px 0', borderTop: '1px solid rgba(184, 144, 71, 0.15)', position: 'relative' }}>
       <div style={{
         position: 'absolute',
         width: '400px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(184, 144, 71, 0.06) 0%, transparent 70%)',
         filter: 'blur(50px)',
         top: '10%',
         right: '-100px',
@@ -208,7 +208,7 @@ export default function Pricing() {
                     {combo.desc}
                   </p>
                 </div>
-                <div style={{ height: '1px', background: 'rgba(16, 185, 129, 0.12)' }} />
+                <div style={{ height: '1px', background: 'rgba(184, 144, 71, 0.12)' }} />
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', flexGrow: 1 }}>
                   {combo.features.map((feat, fidx) => (
                     <li key={fidx} style={{ display: 'flex', gap: '8px', alignItems: 'flex-start', fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
@@ -230,7 +230,7 @@ export default function Pricing() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', textAlign: 'left' }}>
             {standaloneTiers.map((tier, idx) => (
               <div key={idx} className="glass-card" style={{ padding: '30px' }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 850, borderBottom: '1px solid rgba(16, 185, 129, 0.15)', paddingBottom: '12px', marginBottom: '20px', color: 'var(--primary)' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 850, borderBottom: '1px solid rgba(184, 144, 71, 0.15)', paddingBottom: '12px', marginBottom: '20px', color: 'var(--primary)' }}>
                   {tier.category}
                 </h3>
                 
@@ -249,7 +249,7 @@ export default function Pricing() {
 
                 {/* Features (if website development section) */}
                 {tier.features && (
-                  <div style={{ marginTop: '20px', borderTop: '1px solid rgba(16, 185, 129, 0.08)', paddingTop: '16px' }}>
+                  <div style={{ marginTop: '20px', borderTop: '1px solid rgba(184, 144, 71, 0.08)', paddingTop: '16px' }}>
                     <h4 style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '10px' }}>Included Features:</h4>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
                       {tier.features.map((feat, fidx) => (
@@ -272,7 +272,7 @@ export default function Pricing() {
                 <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
                   Advertising campaign spend is paid directly by the client to Google. Our management fees are charged separately.
                 </p>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', background: 'rgba(16, 185, 129, 0.05)', padding: '12px 16px', borderRadius: '10px', marginTop: '16px', border: '1px solid rgba(16, 185, 129, 0.1)' }}>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', background: 'rgba(184, 144, 71, 0.05)', padding: '12px 16px', borderRadius: '10px', marginTop: '16px', border: '1px solid rgba(184, 144, 71, 0.1)' }}>
                   <Calculator size={18} style={{ color: 'var(--primary)' }} />
                   <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)' }}>
                     Example: spend ₹15,000 + management fee ₹5,000 = ₹20,000 total investment.
@@ -283,8 +283,8 @@ export default function Pricing() {
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.85rem' }}>
                   <thead>
                     <tr style={{ borderBottom: '1px solid rgba(52, 211, 153, 0.2)' }}>
-                      <th style={{ textAlign: 'left', padding: '10px 0', color: '#34d399' }}>Daily Budget</th>
-                      <th style={{ textAlign: 'right', padding: '10px 0', color: '#34d399' }}>Monthly Ad Spend</th>
+                      <th style={{ textAlign: 'left', padding: '10px 0', color: '#d4af37' }}>Daily Budget</th>
+                      <th style={{ textAlign: 'right', padding: '10px 0', color: '#d4af37' }}>Monthly Ad Spend</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -335,10 +335,10 @@ export default function Pricing() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)'
+                boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)'
               }}>
                 <div>
-                  <h4 style={{ color: '#34d399', fontSize: '1.15rem', fontWeight: 750, marginBottom: '12px' }}>Request a Custom Quotation</h4>
+                  <h4 style={{ color: '#d4af37', fontSize: '1.15rem', fontWeight: 750, marginBottom: '12px' }}>Request a Custom Quotation</h4>
                   <p style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.75)', lineHeight: '1.5' }}>
                     Speak directly with our software architects to review system logic, databases configurations, and estimate your custom implementation plans.
                   </p>
@@ -352,7 +352,7 @@ export default function Pricing() {
         )}
 
         {/* Section: Why Choose Our Pricing */}
-        <div style={{ borderTop: '1px solid rgba(16, 185, 129, 0.15)', paddingTop: '60px', marginTop: '60px', marginBottom: '60px' }} className="reveal active">
+        <div style={{ borderTop: '1px solid rgba(184, 144, 71, 0.15)', paddingTop: '60px', marginTop: '60px', marginBottom: '60px' }} className="reveal active">
           <span className="badge">Benefits</span>
           <h2>Why Choose Our Pricing?</h2>
           
@@ -379,8 +379,8 @@ export default function Pricing() {
           padding: '50px 30px',
           color: '#fff',
           textAlign: 'center',
-          boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)',
-          border: '1px solid rgba(16, 185, 129, 0.15)'
+          boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)',
+          border: '1px solid rgba(184, 144, 71, 0.15)'
         }}>
           <h2 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Need a Custom Quote?</h2>
           <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '650px', margin: '0 auto 24px auto', fontSize: '0.9rem', lineHeight: '1.5' }}>

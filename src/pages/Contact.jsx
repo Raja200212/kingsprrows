@@ -106,9 +106,9 @@ export default function Contact() {
                   </form>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '10px' }}>
-                    <div style={{ height: '1px', background: 'rgba(16, 185, 129, 0.15)', flexGrow: 1 }} />
+                    <div style={{ height: '1px', background: 'rgba(184, 144, 71, 0.15)', flexGrow: 1 }} />
                     <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>or connect instantly</span>
-                    <div style={{ height: '1px', background: 'rgba(16, 185, 129, 0.15)', flexGrow: 1 }} />
+                    <div style={{ height: '1px', background: 'rgba(184, 144, 71, 0.15)', flexGrow: 1 }} />
                   </div>
 
                   <a 
@@ -182,11 +182,11 @@ export default function Contact() {
             <div style={{ 
               overflow: 'hidden', 
               borderRadius: '16px', 
-              border: '1px solid rgba(16, 185, 129, 0.15)', 
+              border: '1px solid rgba(184, 144, 71, 0.15)', 
               position: 'relative', 
               width: '100%', 
               height: '350px',
-              boxShadow: '0 8px 24px rgba(6, 44, 30, 0.02)'
+              boxShadow: '0 8px 24px rgba(13, 34, 64, 0.02)'
             }}>
               <iframe 
                 src="https://maps.google.com/maps?q=Dindigul%20Bypass%20Road,%20Tamil%20Nadu,%20India&t=&z=14&ie=UTF8&iwloc=&output=embed" 
@@ -209,7 +209,7 @@ export default function Contact() {
 const inputStyle = {
   width: '100%',
   background: '#ffffff',
-  border: '1px solid rgba(16, 185, 129, 0.15)',
+  border: '1px solid rgba(184, 144, 71, 0.15)',
   borderRadius: '9999px',
   padding: '12px 20px',
   color: 'var(--text-primary)',

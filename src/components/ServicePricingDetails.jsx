@@ -112,7 +112,7 @@ export default function ServicePricingDetails() {
     : rateSheet.filter(item => item.category === activeCategory);
 
   return (
-    <section id="detailed-pricing" style={{ padding: '60px 0', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+    <section id="detailed-pricing" style={{ padding: '60px 0', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
       {/* Decorative BG Blob */}
       <div style={{
         position: 'absolute',
@@ -149,7 +149,7 @@ export default function ServicePricingDetails() {
                 display: 'flex',
                 flexDirection: 'column',
                 border: pkg.popular ? '2px solid var(--primary)' : '1px solid var(--border-color)',
-                boxShadow: pkg.popular ? '0 15px 35px rgba(16, 185, 129, 0.1)' : '0 10px 30px rgba(6, 44, 30, 0.02)',
+                boxShadow: pkg.popular ? '0 15px 35px rgba(184, 144, 71, 0.1)' : '0 10px 30px rgba(13, 34, 64, 0.02)',
                 position: 'relative',
                 transform: pkg.popular ? 'translateY(-4px)' : 'none',
                 padding: '28px'
@@ -168,7 +168,7 @@ export default function ServicePricingDetails() {
                   borderRadius: '999px',
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em',
-                  boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)'
+                  boxShadow: '0 4px 12px rgba(184, 144, 71, 0.3)'
                 }}>
                   Best Seller
                 </span>
@@ -179,10 +179,10 @@ export default function ServicePricingDetails() {
                   fontSize: '0.75rem',
                   fontWeight: 650,
                   color: 'var(--secondary)',
-                  background: 'rgba(16, 185, 129, 0.08)',
+                  background: 'rgba(184, 144, 71, 0.08)',
                   padding: '3px 8px',
                   borderRadius: '4px',
-                  border: '1px solid rgba(16, 185, 129, 0.12)'
+                  border: '1px solid rgba(184, 144, 71, 0.12)'
                 }}>
                   {pkg.badge}
                 </span>
@@ -197,7 +197,7 @@ export default function ServicePricingDetails() {
                 {pkg.type.includes("Monthly") && <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>/month</span>}
               </div>
 
-              <div style={{ height: '1px', background: 'rgba(16, 185, 129, 0.1)', marginBottom: '18px' }} />
+              <div style={{ height: '1px', background: 'rgba(184, 144, 71, 0.1)', marginBottom: '18px' }} />
 
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px', flexGrow: 1, marginBottom: '24px' }}>
                 {pkg.features.map((feat, fidx) => (
@@ -231,7 +231,7 @@ export default function ServicePricingDetails() {
           borderRadius: '32px',
           padding: '40px',
           marginBottom: '80px',
-          boxShadow: '0 15px 40px rgba(6, 44, 30, 0.03)'
+          boxShadow: '0 15px 40px rgba(13, 34, 64, 0.03)'
         }} className="calculator-section">
           
           <div>
@@ -256,7 +256,7 @@ export default function ServicePricingDetails() {
                   fontSize: '0.85rem',
                   background: dailyBudget === 300 ? 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)' : 'rgba(255, 255, 255, 0.7)',
                   color: dailyBudget === 300 ? '#fff' : 'var(--text-primary)',
-                  border: dailyBudget === 300 ? 'none' : '1px solid rgba(16, 185, 129, 0.2)',
+                  border: dailyBudget === 300 ? 'none' : '1px solid rgba(184, 144, 71, 0.2)',
                   fontWeight: 650
                 }}
               >
@@ -274,7 +274,7 @@ export default function ServicePricingDetails() {
                   fontSize: '0.85rem',
                   background: dailyBudget === 500 ? 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)' : 'rgba(255, 255, 255, 0.7)',
                   color: dailyBudget === 500 ? '#fff' : 'var(--text-primary)',
-                  border: dailyBudget === 500 ? 'none' : '1px solid rgba(16, 185, 129, 0.2)',
+                  border: dailyBudget === 500 ? 'none' : '1px solid rgba(184, 144, 71, 0.2)',
                   fontWeight: 650
                 }}
               >
@@ -311,9 +311,9 @@ export default function ServicePricingDetails() {
             borderRadius: '24px',
             padding: '30px',
             color: '#fff',
-            boxShadow: '0 10px 30px rgba(6, 44, 30, 0.3)'
+            boxShadow: '0 10px 30px rgba(13, 34, 64, 0.3)'
           }}>
-            <h3 style={{ color: '#34d399', fontSize: '1.1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '1px solid rgba(52, 211, 153, 0.2)', paddingBottom: '12px' }}>
+            <h3 style={{ color: '#d4af37', fontSize: '1.1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '1px solid rgba(52, 211, 153, 0.2)', paddingBottom: '12px' }}>
               Monthly Fee Breakdown
             </h3>
 
@@ -330,8 +330,8 @@ export default function ServicePricingDetails() {
               <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.1)', margin: '4px 0' }} />
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                <span style={{ color: '#34d399', fontWeight: 650, fontSize: '0.9rem' }}>Total Monthly:</span>
-                <span style={{ fontSize: '1.6rem', fontWeight: 800, color: '#34d399' }}>₹{totalCost.toLocaleString()}</span>
+                <span style={{ color: '#d4af37', fontWeight: 650, fontSize: '0.9rem' }}>Total Monthly:</span>
+                <span style={{ fontSize: '1.6rem', fontWeight: 800, color: '#d4af37' }}>₹{totalCost.toLocaleString()}</span>
               </div>
             </div>
 
@@ -346,7 +346,7 @@ export default function ServicePricingDetails() {
               lineHeight: '1.4',
               color: 'rgba(255, 255, 255, 0.8)'
             }}>
-              <Info size={16} style={{ color: '#34d399', flexShrink: 0, marginTop: '2px' }} />
+              <Info size={16} style={{ color: '#d4af37', flexShrink: 0, marginTop: '2px' }} />
               <div>
                 <strong>Math Breakdown:</strong> ₹{monthlyAdSpend.toLocaleString()} (Ad budget) + ₹{managementFee.toLocaleString()} (Management fee) = <strong>₹{totalCost.toLocaleString()}</strong> per month.
               </div>
@@ -372,7 +372,7 @@ export default function ServicePricingDetails() {
             </p>
 
             {/* Category Filter Tabs */}
-            <div style={{ display: 'inline-flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(255, 255, 255, 0.45)', border: '1px solid rgba(16, 185, 129, 0.1)', padding: '5px', borderRadius: '14px', marginTop: '24px' }}>
+            <div style={{ display: 'inline-flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(255, 255, 255, 0.45)', border: '1px solid rgba(184, 144, 71, 0.1)', padding: '5px', borderRadius: '14px', marginTop: '24px' }}>
               {[
                 { id: 'all', label: 'All Services' },
                 { id: 'dev', label: 'Web & Development' },
@@ -405,7 +405,7 @@ export default function ServicePricingDetails() {
           <div className="glass-card" style={{ padding: '24px 32px', overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>
               <thead>
-                <tr style={{ borderBottom: '2px solid rgba(16, 185, 129, 0.15)' }}>
+                <tr style={{ borderBottom: '2px solid rgba(184, 144, 71, 0.15)' }}>
                   <th style={{ padding: '16px 8px', color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.9rem' }}>Stand-alone Service Name</th>
                   <th style={{ padding: '16px 8px', color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.9rem' }}>One-Time Charge</th>
                   <th style={{ padding: '16px 8px', color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.9rem' }}>Monthly Management Fee</th>
@@ -417,7 +417,7 @@ export default function ServicePricingDetails() {
                   <tr 
                     key={idx} 
                     style={{ 
-                      borderBottom: '1px solid rgba(16, 185, 129, 0.08)',
+                      borderBottom: '1px solid rgba(184, 144, 71, 0.08)',
                       transition: 'background-color 0.2s',
                     }}
                     className="rate-row"
@@ -430,7 +430,7 @@ export default function ServicePricingDetails() {
                         width: '28px',
                         height: '28px',
                         borderRadius: '6px',
-                        background: 'rgba(16, 185, 129, 0.06)',
+                        background: 'rgba(184, 144, 71, 0.06)',
                         color: 'var(--primary)'
                       }}>
                         {item.icon}
@@ -477,7 +477,7 @@ export default function ServicePricingDetails() {
           }
         }
         .rate-row:hover {
-          background-color: rgba(16, 185, 129, 0.03);
+          background-color: rgba(184, 144, 71, 0.03);
         }
       `}</style>
     </section>

@@ -70,7 +70,7 @@ export default function BlogDetail() {
           />
 
           {/* Related Articles Footer */}
-          <div style={{ marginTop: '80px', borderTop: '1px solid rgba(16, 185, 129, 0.15)', paddingTop: '40px' }}>
+          <div style={{ marginTop: '80px', borderTop: '1px solid rgba(184, 144, 71, 0.15)', paddingTop: '40px' }}>
             <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)', marginBottom: '24px' }}>Recommended Reading</h3>
             <div className="grid-2">
               {relatedPosts.map((related, idx) => (
@@ -111,7 +111,7 @@ export default function BlogDetail() {
         }
         .glass-card-link:hover .glass-card {
           transform: translateY(-4px);
-          border-color: rgba(16, 185, 129, 0.4) !important;
+          border-color: rgba(184, 144, 71, 0.4) !important;
         }
       `}</style>
     </>

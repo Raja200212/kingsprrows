@@ -139,7 +139,7 @@ export default function Industries() {
                       width: '44px',
                       height: '44px',
                       borderRadius: '10px',
-                      background: 'rgba(16, 185, 129, 0.08)',
+                      background: 'rgba(184, 144, 71, 0.08)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center'
@@ -156,8 +156,8 @@ export default function Industries() {
 
                 {/* Solutions List */}
                 <div style={{ 
-                  background: 'rgba(16, 185, 129, 0.04)', 
-                  border: '1px solid rgba(16, 185, 129, 0.12)', 
+                  background: 'rgba(184, 144, 71, 0.04)', 
+                  border: '1px solid rgba(184, 144, 71, 0.12)', 
                   borderRadius: '12px', 
                   padding: '16px' 
                 }}>
@@ -179,7 +179,7 @@ export default function Industries() {
           </div>
 
           {/* Section: Why Businesses Choose Us */}
-          <div style={{ borderTop: '1px solid rgba(16, 185, 129, 0.15)', paddingTop: '60px', marginBottom: '80px' }} className="reveal active">
+          <div style={{ borderTop: '1px solid rgba(184, 144, 71, 0.15)', paddingTop: '60px', marginBottom: '80px' }} className="reveal active">
             <span className="badge">Our Standards</span>
             <h2>Why Businesses Choose Us</h2>
             <p style={{ maxWidth: '600px', margin: '0 auto 40px auto', color: 'var(--text-secondary)' }}>
@@ -200,7 +200,7 @@ export default function Industries() {
                     width: '28px',
                     height: '28px',
                     borderRadius: '50%',
-                    background: 'rgba(16, 185, 129, 0.1)',
+                    background: 'rgba(184, 144, 71, 0.1)',
                     color: 'var(--primary)',
                     flexShrink: 0
                   }}>
@@ -219,8 +219,8 @@ export default function Industries() {
             padding: '50px 30px',
             color: '#fff',
             textAlign: 'center',
-            boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)',
-            border: '1px solid rgba(16, 185, 129, 0.15)'
+            boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)',
+            border: '1px solid rgba(184, 144, 71, 0.15)'
           }}>
             <h2 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Let's Build Your Success Together</h2>
             <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '650px', margin: '0 auto 24px auto', fontSize: '0.9rem', lineHeight: '1.5' }}>

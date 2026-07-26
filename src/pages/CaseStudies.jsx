@@ -159,7 +159,7 @@ export default function CaseStudies() {
             </p>
 
             {/* Filter Tabs */}
-            <div style={{ display: 'inline-flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(255, 255, 255, 0.45)', border: '1px solid rgba(16, 185, 129, 0.1)', padding: '5px', borderRadius: '14px', marginTop: '36px' }}>
+            <div style={{ display: 'inline-flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(255, 255, 255, 0.45)', border: '1px solid rgba(184, 144, 71, 0.1)', padding: '5px', borderRadius: '14px', marginTop: '36px' }}>
               {[
                 { id: 'all', label: 'All Projects' },
                 { id: 'marketing', label: 'Digital Marketing & Ads' },
@@ -210,10 +210,10 @@ export default function CaseStudies() {
                       fontSize: '0.7rem',
                       fontWeight: 700,
                       color: 'var(--secondary)',
-                      background: 'rgba(16, 185, 129, 0.08)',
+                      background: 'rgba(184, 144, 71, 0.08)',
                       padding: '4px 10px',
                       borderRadius: '4px',
-                      border: '1px solid rgba(16, 185, 129, 0.12)'
+                      border: '1px solid rgba(184, 144, 71, 0.12)'
                     }}>
                       {cs.tag}
                     </span>
@@ -251,19 +251,19 @@ export default function CaseStudies() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)'
+                  boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)'
                 }}>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '1px solid rgba(52, 211, 153, 0.2)', paddingBottom: '12px', marginBottom: '24px' }}>
-                      <TrendingUp style={{ color: '#34d399' }} size={20} />
-                      <h4 style={{ color: '#34d399', fontSize: '1rem', fontWeight: 750 }}>Measurable Results</h4>
+                      <TrendingUp style={{ color: '#d4af37' }} size={20} />
+                      <h4 style={{ color: '#d4af37', fontSize: '1rem', fontWeight: 750 }}>Measurable Results</h4>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                       {cs.results.map((res, rIdx) => (
                         <div key={rIdx} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                           <span style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.65)' }}>{res.label}</span>
-                          <strong style={{ fontSize: '1.8rem', color: '#34d399', fontWeight: 800 }}>{res.val}</strong>
+                          <strong style={{ fontSize: '1.8rem', color: '#d4af37', fontWeight: 800 }}>{res.val}</strong>
                         </div>
                       ))}
                     </div>
@@ -284,7 +284,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Process Section */}
-          <div style={{ borderTop: '1px solid rgba(16, 185, 129, 0.15)', paddingTop: '60px', marginBottom: '80px' }} className="reveal active">
+          <div style={{ borderTop: '1px solid rgba(184, 144, 71, 0.15)', paddingTop: '60px', marginBottom: '80px' }} className="reveal active">
             <span className="badge">Methodology</span>
             <h2>Our Process</h2>
             
@@ -296,7 +296,7 @@ export default function CaseStudies() {
                 { step: "4", title: "Optimize for Growth", desc: "Using performance insights, we continuously improve campaigns and systems to maximize long-term results." }
               ].map((p, idx) => (
                 <div key={idx} className="glass-card" style={{ padding: '24px', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <span style={{ fontSize: '2rem', fontWeight: 900, color: 'rgba(16, 185, 129, 0.15)' }}>{p.step}</span>
+                  <span style={{ fontSize: '2rem', fontWeight: 900, color: 'rgba(184, 144, 71, 0.15)' }}>{p.step}</span>
                   <h3 style={{ fontSize: '1rem', fontWeight: 750 }}>{p.title}</h3>
                   <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>{p.desc}</p>
                 </div>
@@ -323,7 +323,7 @@ export default function CaseStudies() {
                     fontWeight: 650,
                     color: 'var(--text-secondary)',
                     boxShadow: 'none',
-                    border: '1px solid rgba(16, 185, 129, 0.12)'
+                    border: '1px solid rgba(184, 144, 71, 0.12)'
                   }}
                 >
                   {item}
@@ -339,8 +339,8 @@ export default function CaseStudies() {
             padding: '50px 30px',
             color: '#fff',
             textAlign: 'center',
-            boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)',
-            border: '1px solid rgba(16, 185, 129, 0.15)'
+            boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)',
+            border: '1px solid rgba(184, 144, 71, 0.15)'
           }}>
             <h2 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Ready to Be Our Next Success Story?</h2>
             <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '600px', margin: '0 auto 24px auto', fontSize: '0.9rem', lineHeight: '1.5' }}>

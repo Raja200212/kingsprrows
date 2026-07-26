@@ -43,13 +43,13 @@ export default function WebsiteAuditTool() {
   };
 
   return (
-    <section id="audit-tool" style={{ padding: '60px 0', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+    <section id="audit-tool" style={{ padding: '60px 0', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
       {/* Decorative Blob */}
       <div style={{
         position: 'absolute',
         width: '350px',
         height: '350px',
-        background: 'radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(184, 144, 71, 0.05) 0%, transparent 70%)',
         filter: 'blur(45px)',
         top: '20%',
         right: '5%',
@@ -110,7 +110,7 @@ export default function WebsiteAuditTool() {
                   {scanSteps[scanStep]}
                 </p>
               </div>
-              <div style={{ width: '100%', height: '6px', background: 'rgba(16, 185, 129, 0.08)', borderRadius: '3px', overflow: 'hidden' }}>
+              <div style={{ width: '100%', height: '6px', background: 'rgba(184, 144, 71, 0.08)', borderRadius: '3px', overflow: 'hidden' }}>
                 <div style={{
                   width: `${((scanStep + 1) / scanSteps.length) * 100}%`,
                   height: '100%',
@@ -124,12 +124,12 @@ export default function WebsiteAuditTool() {
           {reportReady && (
             /* COMPLETED AUDIT REPORT */
             <div style={{ textAlign: 'left' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(16, 185, 129, 0.15)', paddingBottom: '16px', marginBottom: '24px' }} className="report-header">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(184, 144, 71, 0.15)', paddingBottom: '16px', marginBottom: '24px' }} className="report-header">
                 <div>
                   <h3 style={{ fontSize: '1.4rem' }}>Audit Summary for <span style={{ color: 'var(--primary)' }}>{new URL(url).hostname}</span></h3>
                   <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Report generated: Just now</p>
                 </div>
-                <span style={{ fontSize: '0.8rem', padding: '4px 12px', borderRadius: '8px', background: 'rgba(16, 185, 129, 0.1)', color: 'var(--secondary)', border: '1px solid rgba(16, 185, 129, 0.15)', fontWeight: 650 }}>
+                <span style={{ fontSize: '0.8rem', padding: '4px 12px', borderRadius: '8px', background: 'rgba(184, 144, 71, 0.1)', color: 'var(--secondary)', border: '1px solid rgba(184, 144, 71, 0.15)', fontWeight: 650 }}>
                   Overall Score: 78% (Fair)
                 </span>
               </div>
@@ -256,7 +256,7 @@ const inputStyle = {
   width: '100%',
   padding: '12px 16px',
   background: 'rgba(255, 255, 255, 0.75)',
-  border: '1px solid rgba(16, 185, 129, 0.15)',
+  border: '1px solid rgba(184, 144, 71, 0.15)',
   borderRadius: '8px',
   color: 'var(--text-primary)',
   outline: 'none',
@@ -267,7 +267,7 @@ const inputStyle = {
 
 const metricCardStyle = {
   background: 'rgba(255, 255, 255, 0.4)',
-  border: '1px solid rgba(16, 185, 129, 0.12)',
+  border: '1px solid rgba(184, 144, 71, 0.12)',
   borderRadius: '12px',
   padding: '16px',
   display: 'flex',
@@ -280,7 +280,7 @@ const issueRowStyle = {
   display: 'flex',
   gap: '12px',
   background: 'rgba(255, 255, 255, 0.3)',
-  border: '1px solid rgba(16, 185, 129, 0.08)',
+  border: '1px solid rgba(184, 144, 71, 0.08)',
   borderRadius: '8px',
   padding: '12px 16px',
   alignItems: 'flex-start'

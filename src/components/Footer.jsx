@@ -28,7 +28,7 @@ export default function Footer() {
       background: 'rgba(255, 255, 255, 0.45)',
       backdropFilter: 'blur(20px)',
       WebkitBackdropFilter: 'blur(20px)',
-      borderTop: '1px solid rgba(16, 185, 129, 0.15)',
+      borderTop: '1px solid rgba(184, 144, 71, 0.15)',
       padding: '60px 0 30px 0',
       position: 'relative'
     }}>
@@ -54,12 +54,8 @@ export default function Footer() {
           }}>
           <img src={logoImg} alt="KingSparrow Emblem" style={{
             height: '32px',
-            width: '32px',
-            borderRadius: '50%',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            border: '1px solid rgba(16, 185, 129, 0.4)',
-            boxShadow: '0 0 10px rgba(16, 185, 129, 0.15)'
+            width: 'auto',
+            objectFit: 'contain'
           }} />
           <span>King<span className="text-gradient-purple">Sparrow</span></span>
           </Link>
@@ -103,7 +99,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="container footer-bottom" style={{
-        borderTop: '1px solid rgba(16, 185, 129, 0.15)',
+        borderTop: '1px solid rgba(184, 144, 71, 0.15)',
         paddingTop: '24px',
         display: 'flex',
         justifyContent: 'space-between',
@@ -160,7 +156,7 @@ export default function Footer() {
             padding: 0,
             borderRadius: '16px',
             overflow: 'hidden',
-            border: '1px solid rgba(16, 185, 129, 0.25)',
+            border: '1px solid rgba(184, 144, 71, 0.25)',
             background: 'rgba(255, 255, 255, 0.85)',
             textAlign: 'left',
             animation: 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards'
@@ -217,7 +213,7 @@ export default function Footer() {
             }}>
               <div style={{
                 background: '#ffffff',
-                border: '1px solid rgba(16, 185, 129, 0.15)',
+                border: '1px solid rgba(184, 144, 71, 0.15)',
                 borderRadius: '8px',
                 padding: '10px 12px',
                 fontSize: '0.8rem',
@@ -246,7 +242,7 @@ export default function Footer() {
 
             {/* Send Input */}
             <form onSubmit={handleChatSubmit} style={{
-              borderTop: '1px solid rgba(16, 185, 129, 0.15)',
+              borderTop: '1px solid rgba(184, 144, 71, 0.15)',
               padding: '12px',
               display: 'flex',
               gap: '8px',
@@ -260,7 +256,7 @@ export default function Footer() {
                 style={{
                   flexGrow: 1,
                   background: '#ffffff',
-                  border: '1px solid rgba(16, 185, 129, 0.15)',
+                  border: '1px solid rgba(184, 144, 71, 0.15)',
                   borderRadius: '9999px',
                   padding: '8px 14px',
                   color: 'var(--text-primary)',

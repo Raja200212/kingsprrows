@@ -242,7 +242,7 @@ export default function ServicesPage() {
                       width: '44px',
                       height: '44px',
                       borderRadius: '10px',
-                      background: 'rgba(16, 185, 129, 0.08)',
+                      background: 'rgba(184, 144, 71, 0.08)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center'
@@ -269,7 +269,7 @@ export default function ServicesPage() {
                             background: 'rgba(255, 255, 255, 0.65)',
                             padding: '4px 8px',
                             borderRadius: '5px',
-                            border: '1px solid rgba(16, 185, 129, 0.1)',
+                            border: '1px solid rgba(184, 144, 71, 0.1)',
                             color: 'var(--text-secondary)'
                           }}
                         >
@@ -282,8 +282,8 @@ export default function ServicesPage() {
 
                 {/* Bottom Benefits Block */}
                 <div style={{ 
-                  background: 'rgba(16, 185, 129, 0.04)', 
-                  border: '1px solid rgba(16, 185, 129, 0.12)', 
+                  background: 'rgba(184, 144, 71, 0.04)', 
+                  border: '1px solid rgba(184, 144, 71, 0.12)', 
                   borderRadius: '12px', 
                   padding: '16px',
                   marginTop: '10px'
@@ -312,8 +312,8 @@ export default function ServicesPage() {
             padding: '50px 30px',
             color: '#fff',
             textAlign: 'center',
-            boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)',
-            border: '1px solid rgba(16, 185, 129, 0.15)',
+            boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)',
+            border: '1px solid rgba(184, 144, 71, 0.15)',
             marginTop: '80px'
           }}>
             <h2 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Empower Your Business Today</h2>

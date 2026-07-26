@@ -52,12 +52,12 @@ export default function GrowthEstimator() {
   };
 
   return (
-    <section id="estimator" style={{ borderTop: '1px solid rgba(16, 185, 129, 0.15)', position: 'relative' }}>
+    <section id="estimator" style={{ borderTop: '1px solid rgba(184, 144, 71, 0.15)', position: 'relative' }}>
       <div style={{
         position: 'absolute',
         width: '400px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(184, 144, 71, 0.08) 0%, transparent 70%)',
         filter: 'blur(50px)',
         bottom: '10%',
         right: '-100px',
@@ -88,7 +88,7 @@ export default function GrowthEstimator() {
             left: 0,
             right: 0,
             height: '2px',
-            background: 'rgba(16, 185, 129, 0.15)',
+            background: 'rgba(184, 144, 71, 0.15)',
             zIndex: 1
           }} />
           <div style={{
@@ -108,7 +108,7 @@ export default function GrowthEstimator() {
               height: '32px',
               borderRadius: '50%',
               background: step >= num ? 'var(--primary)' : 'var(--bg-main)',
-              border: `2px solid ${step >= num ? 'var(--primary)' : 'rgba(16, 185, 129, 0.2)'}`,
+              border: `2px solid ${step >= num ? 'var(--primary)' : 'rgba(184, 144, 71, 0.2)'}`,
               color: step >= num ? '#fff' : 'var(--text-secondary)',
               display: 'flex',
               alignItems: 'center',
@@ -116,7 +116,7 @@ export default function GrowthEstimator() {
               fontWeight: 'bold',
               fontSize: '0.85rem',
               zIndex: 3,
-              boxShadow: step >= num ? '0 0 10px rgba(16, 185, 129, 0.3)' : 'none',
+              boxShadow: step >= num ? '0 0 10px rgba(184, 144, 71, 0.3)' : 'none',
               transition: 'all 0.3s'
             }}>
               {num}
@@ -133,14 +133,14 @@ export default function GrowthEstimator() {
                 width: '64px',
                 height: '64px',
                 borderRadius: '50%',
-                background: 'rgba(16, 185, 129, 0.1)',
+                background: 'rgba(184, 144, 71, 0.1)',
                 color: 'var(--primary)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 20px auto',
                 border: '2px solid var(--primary)',
-                boxShadow: '0 0 20px rgba(16, 185, 129, 0.2)'
+                boxShadow: '0 0 20px rgba(184, 144, 71, 0.2)'
               }}>
                 <Check size={32} />
               </div>
@@ -171,8 +171,8 @@ export default function GrowthEstimator() {
                             justifyContent: 'space-between',
                             padding: '14px 20px',
                             borderRadius: '10px',
-                            background: isSelected ? 'rgba(16, 185, 129, 0.08)' : 'rgba(255, 255, 255, 0.45)',
-                            border: `1px solid ${isSelected ? 'var(--primary)' : 'rgba(16, 185, 129, 0.15)'}`,
+                            background: isSelected ? 'rgba(184, 144, 71, 0.08)' : 'rgba(255, 255, 255, 0.45)',
+                            border: `1px solid ${isSelected ? 'var(--primary)' : 'rgba(184, 144, 71, 0.15)'}`,
                             cursor: 'pointer',
                             transition: 'all 0.2s'
                           }}
@@ -184,7 +184,7 @@ export default function GrowthEstimator() {
                             width: '20px',
                             height: '20px',
                             borderRadius: '4px',
-                            border: '1px solid rgba(16, 185, 129, 0.35)',
+                            border: '1px solid rgba(184, 144, 71, 0.35)',
                             background: isSelected ? 'var(--primary)' : 'transparent',
                             display: 'flex',
                             alignItems: 'center',
@@ -218,7 +218,7 @@ export default function GrowthEstimator() {
                     Select the estimated monthly budget you want to allocate for online advertising/tool operations.
                   </p>
 
-                  <div style={{ background: 'rgba(255, 255, 255, 0.45)', border: '1px solid rgba(16, 185, 129, 0.15)', borderRadius: '12px', padding: '24px', marginBottom: '32px' }}>
+                  <div style={{ background: 'rgba(255, 255, 255, 0.45)', border: '1px solid rgba(184, 144, 71, 0.15)', borderRadius: '12px', padding: '24px', marginBottom: '32px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                       <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Monthly Budget Allocation</span>
                       <span style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--secondary)' }}>${budget.toLocaleString()}</span>
@@ -280,7 +280,7 @@ export default function GrowthEstimator() {
                   {/* Signup Details */}
                   <form onSubmit={handleFormSubmit} style={{
                     background: 'rgba(255, 255, 255, 0.45)',
-                    border: '1px solid rgba(16, 185, 129, 0.15)',
+                    border: '1px solid rgba(184, 144, 71, 0.15)',
                     borderRadius: '12px',
                     padding: '24px',
                     display: 'flex',
@@ -366,7 +366,7 @@ const formInputStyle = {
   width: '100%',
   padding: '10px 14px',
   background: 'rgba(255, 255, 255, 0.55)',
-  border: '1px solid rgba(16, 185, 129, 0.15)',
+  border: '1px solid rgba(184, 144, 71, 0.15)',
   borderRadius: '6px',
   color: 'var(--text-primary)',
   outline: 'none',
@@ -375,7 +375,7 @@ const formInputStyle = {
 
 const resultCardStyle = {
   background: 'rgba(255, 255, 255, 0.4)',
-  border: '1px solid rgba(16, 185, 129, 0.12)',
+  border: '1px solid rgba(184, 144, 71, 0.12)',
   borderRadius: '8px',
   padding: '16px',
   display: 'flex',

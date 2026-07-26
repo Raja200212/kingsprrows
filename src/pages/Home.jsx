@@ -102,7 +102,7 @@ export default function Home() {
       <Hero />
 
       {/* 2. Trusted Partner Section */}
-      <section style={{ padding: '80px 0', background: 'rgba(16, 185, 129, 0.02)', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', background: 'rgba(184, 144, 71, 0.02)', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
           <span className="badge">Your Growth Partner</span>
           <h2 style={{ fontSize: '2rem', marginBottom: '20px' }}>Your Technology Partner for Business Growth</h2>
@@ -118,7 +118,7 @@ export default function Home() {
       </div>
 
       {/* 4. Why Choose Us Section */}
-      <section style={{ padding: '80px 0', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <span className="badge">Our Commitments</span>
@@ -142,7 +142,7 @@ export default function Home() {
                   width: '28px',
                   height: '28px',
                   borderRadius: '50%',
-                  background: 'rgba(16, 185, 129, 0.1)',
+                  background: 'rgba(184, 144, 71, 0.1)',
                   color: 'var(--primary)',
                   flexShrink: 0
                 }}>
@@ -156,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* 5. Our Process Section */}
-      <section style={{ padding: '80px 0', background: 'rgba(16, 185, 129, 0.02)', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', background: 'rgba(184, 144, 71, 0.02)', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <span className="badge">Roadmap</span>
@@ -176,7 +176,7 @@ export default function Home() {
                 <span style={{
                   fontSize: '2.5rem',
                   fontWeight: 900,
-                  color: 'rgba(16, 185, 129, 0.15)',
+                  color: 'rgba(184, 144, 71, 0.15)',
                   lineHeight: '1',
                   fontFamily: 'var(--heading)'
                 }}>
@@ -191,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* 6. Industries We Serve Section */}
-      <section style={{ padding: '80px 0', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="badge">Niche Expertise</span>
@@ -219,7 +219,7 @@ export default function Home() {
                   fontSize: '0.85rem',
                   fontWeight: 600,
                   color: 'var(--text-secondary)',
-                  border: '1px solid rgba(16, 185, 129, 0.12)',
+                  border: '1px solid rgba(184, 144, 71, 0.12)',
                   boxShadow: 'none'
                 }}
               >
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* 7. Recent Projects Section */}
-      <section style={{ padding: '80px 0', background: 'rgba(16, 185, 129, 0.02)', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', background: 'rgba(184, 144, 71, 0.02)', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <span className="badge">Portfolio Preview</span>
@@ -258,7 +258,7 @@ export default function Home() {
       </section>
 
       {/* 8. What Our Clients Say (Testimonials) Section */}
-      <section style={{ padding: '80px 0', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <span className="badge">Reviews</span>
@@ -271,7 +271,7 @@ export default function Home() {
                 <p style={{ fontSize: '0.9rem', fontStyle: 'italic', color: 'var(--text-secondary)', lineHeight: '1.5', flexGrow: 1 }}>
                   "{test.quote}"
                 </p>
-                <div style={{ borderTop: '1px solid rgba(16, 185, 129, 0.1)', paddingTop: '12px', marginTop: '16px' }}>
+                <div style={{ borderTop: '1px solid rgba(184, 144, 71, 0.1)', paddingTop: '12px', marginTop: '16px' }}>
                   <strong style={{ fontSize: '0.8rem', color: 'var(--text-primary)' }}>- {test.author}</strong>
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* 9. Frequently Asked Questions (FAQ) Section */}
-      <section style={{ padding: '80px 0', background: 'rgba(16, 185, 129, 0.02)', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '80px 0', background: 'rgba(184, 144, 71, 0.02)', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container" style={{ maxWidth: '800px' }}>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="badge">FAQ Section</span>
@@ -319,7 +319,7 @@ export default function Home() {
                   </div>
                   
                   {isOpen && (
-                    <div style={{ marginTop: '12px', fontSize: '0.85rem', color: 'var(--text-secondary)', borderTop: '1px solid rgba(16, 185, 129, 0.08)', paddingTop: '12px', lineHeight: '1.5' }}>
+                    <div style={{ marginTop: '12px', fontSize: '0.85rem', color: 'var(--text-secondary)', borderTop: '1px solid rgba(184, 144, 71, 0.08)', paddingTop: '12px', lineHeight: '1.5' }}>
                       {faq.a}
                     </div>
                   )}
@@ -339,13 +339,13 @@ export default function Home() {
             padding: '50px 40px',
             color: '#fff',
             textAlign: 'center',
-            boxShadow: '0 15px 40px rgba(6, 44, 30, 0.2)',
-            border: '1px solid rgba(16, 185, 129, 0.15)'
+            boxShadow: '0 15px 40px rgba(13, 34, 64, 0.2)',
+            border: '1px solid rgba(184, 144, 71, 0.15)'
           }}>
             <span style={{
               fontSize: '0.75rem',
               fontWeight: 650,
-              color: '#34d399',
+              color: '#d4af37',
               background: 'rgba(52, 211, 153, 0.1)',
               padding: '6px 14px',
               borderRadius: '9999px',
@@ -388,7 +388,7 @@ export default function Home() {
       </section>
 
       {/* 11. Quick Contact Details */}
-      <section style={{ padding: '40px 0 80px 0', borderTop: '1px solid rgba(16, 185, 129, 0.1)' }}>
+      <section style={{ padding: '40px 0 80px 0', borderTop: '1px solid rgba(184, 144, 71, 0.1)' }}>
         <div className="container" style={{ maxWidth: '850px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', textAlign: 'left' }}>
             <div className="glass-card" style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '14px' }}>

@@ -68,7 +68,7 @@ export default function About() {
             </p>
           </div>
 
-          <div style={{ height: '1px', background: 'rgba(16, 185, 129, 0.15)', margin: '40px 0' }} />
+          <div style={{ height: '1px', background: 'rgba(184, 144, 71, 0.15)', margin: '40px 0' }} />
 
           {/* Section 2: Our Story */}
           <div className="grid-2 reveal active" style={{ textAlign: 'left', alignItems: 'center', marginBottom: '80px' }}>
@@ -137,7 +137,7 @@ export default function About() {
                     width: '36px',
                     height: '36px',
                     borderRadius: '8px',
-                    background: 'rgba(16, 185, 129, 0.08)',
+                    background: 'rgba(184, 144, 71, 0.08)',
                     color: 'var(--primary)'
                   }}>
                     {val.icon}
@@ -150,7 +150,7 @@ export default function About() {
           </div>
 
           {/* Section 5: Team Overview */}
-          <div className="reveal active" style={{ marginBottom: '80px', borderTop: '1px solid rgba(16, 185, 129, 0.15)', paddingTop: '60px' }}>
+          <div className="reveal active" style={{ marginBottom: '80px', borderTop: '1px solid rgba(184, 144, 71, 0.15)', paddingTop: '60px' }}>
             <span className="badge">Our People</span>
             <h2>Meet Our Team</h2>
             <p style={{ maxWidth: '650px', margin: '0 auto 32px auto', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
@@ -175,7 +175,7 @@ export default function About() {
                     fontSize: '0.8rem',
                     fontWeight: 650,
                     color: 'var(--text-primary)',
-                    border: '1px solid rgba(16, 185, 129, 0.12)',
+                    border: '1px solid rgba(184, 144, 71, 0.12)',
                     boxShadow: 'none',
                     display: 'flex',
                     alignItems: 'center',
@@ -217,7 +217,7 @@ export default function About() {
                       background: 'rgba(255, 255, 255, 0.65)', 
                       padding: '5px 12px', 
                       borderRadius: '6px',
-                      border: '1px solid rgba(16, 185, 129, 0.12)',
+                      border: '1px solid rgba(184, 144, 71, 0.12)',
                       color: 'var(--text-secondary)',
                       fontWeight: 550
                     }}
@@ -236,8 +236,8 @@ export default function About() {
             padding: '40px 30px',
             color: '#fff',
             textAlign: 'center',
-            boxShadow: '0 10px 30px rgba(6, 44, 30, 0.2)',
-            border: '1px solid rgba(16, 185, 129, 0.15)'
+            boxShadow: '0 10px 30px rgba(13, 34, 64, 0.2)',
+            border: '1px solid rgba(184, 144, 71, 0.15)'
           }}>
             <h2 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '12px' }}>Let's Build Your Digital Future</h2>
             <p style={{ color: 'rgba(255, 255, 255, 0.8)', maxWidth: '600px', margin: '0 auto 24px auto', fontSize: '0.9rem', lineHeight: '1.5' }}>

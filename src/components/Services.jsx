@@ -80,13 +80,13 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" style={{ borderTop: '1px solid rgba(16, 185, 129, 0.15)', position: 'relative' }}>
+    <section id="services" style={{ borderTop: '1px solid rgba(184, 144, 71, 0.15)', position: 'relative' }}>
       {/* Decorative Blur circles */}
       <div style={{
         position: 'absolute',
         width: '400px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(184, 144, 71, 0.08) 0%, transparent 70%)',
         filter: 'blur(50px)',
         top: '20%',
         left: '-100px',
@@ -133,12 +133,12 @@ export default function Services() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '12px',
-                background: 'rgba(16, 185, 129, 0.1)',
+                background: 'rgba(184, 144, 71, 0.1)',
                 color: 'var(--primary)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 0 15px rgba(16, 185, 129, 0.15)'
+                boxShadow: '0 0 15px rgba(184, 144, 71, 0.15)'
               }}>
                 {service.icon}
               </div>
@@ -149,7 +149,7 @@ export default function Services() {
                 listStyle: 'none',
                 padding: 0,
                 marginTop: '8px',
-                borderTop: '1px solid rgba(16, 185, 129, 0.1)',
+                borderTop: '1px solid rgba(184, 144, 71, 0.1)',
                 paddingTop: '16px',
                 display: 'flex',
                 flexDirection: 'column',

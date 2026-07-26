@@ -108,7 +108,7 @@ export default function ToolsShowcase() {
   const projectedRevenue = Math.round(emailConversions * orderValue);
 
   return (
-    <section id="tools" style={{ borderTop: '1px solid rgba(16, 185, 129, 0.15)' }}>
+    <section id="tools" style={{ borderTop: '1px solid rgba(184, 144, 71, 0.15)' }}>
       <div className="container">
         <div className="reveal active" style={{ textAlign: 'center', marginBottom: '40px' }}>
           <div className="badge">Interactive Sandboxes</div>
@@ -120,7 +120,7 @@ export default function ToolsShowcase() {
           <div style={{
             display: 'inline-flex',
             background: 'rgba(255, 255, 255, 0.55)',
-            border: '1px solid rgba(16, 185, 129, 0.15)',
+            border: '1px solid rgba(184, 144, 71, 0.15)',
             padding: '6px',
             borderRadius: '12px',
             marginTop: '32px'
@@ -128,9 +128,9 @@ export default function ToolsShowcase() {
             <button 
               onClick={() => setActiveTool('whatsapp')}
               style={{
-                background: activeTool === 'whatsapp' ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
+                background: activeTool === 'whatsapp' ? 'rgba(184, 144, 71, 0.15)' : 'transparent',
                 color: activeTool === 'whatsapp' ? 'var(--secondary)' : 'var(--text-muted)',
-                border: activeTool === 'whatsapp' ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid transparent',
+                border: activeTool === 'whatsapp' ? '1px solid rgba(184, 144, 71, 0.3)' : '1px solid transparent',
                 padding: '10px 24px',
                 borderRadius: '8px',
                 cursor: 'pointer',
@@ -147,9 +147,9 @@ export default function ToolsShowcase() {
             <button 
               onClick={() => setActiveTool('email')}
               style={{
-                background: activeTool === 'email' ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
+                background: activeTool === 'email' ? 'rgba(184, 144, 71, 0.15)' : 'transparent',
                 color: activeTool === 'email' ? 'var(--primary)' : 'var(--text-muted)',
-                border: activeTool === 'email' ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid transparent',
+                border: activeTool === 'email' ? '1px solid rgba(184, 144, 71, 0.3)' : '1px solid transparent',
                 padding: '10px 24px',
                 borderRadius: '8px',
                 cursor: 'pointer',
@@ -243,14 +243,14 @@ export default function ToolsShowcase() {
               </div>
 
               {/* Simulator Execution Output */}
-              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '20px', border: '1px solid rgba(16, 185, 129, 0.25)' }}>
+              <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '20px', border: '1px solid rgba(184, 144, 71, 0.25)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <h3 style={{ fontSize: '1.4rem' }}>Live Console</h3>
                   <span style={{
                     fontSize: '0.75rem',
                     padding: '4px 10px',
                     borderRadius: '9999px',
-                    background: sending ? 'rgba(234, 179, 8, 0.15)' : 'rgba(16, 185, 129, 0.15)',
+                    background: sending ? 'rgba(234, 179, 8, 0.15)' : 'rgba(184, 144, 71, 0.15)',
                     color: sending ? '#eab308' : 'var(--primary)',
                     border: '1px solid currentColor'
                   }}>
@@ -280,13 +280,13 @@ export default function ToolsShowcase() {
                     <span style={{ color: 'var(--text-secondary)' }}>Send Progress</span>
                     <span style={{ color: 'var(--secondary)' }}>{progress}%</span>
                   </div>
-                  <div style={{ width: '100%', height: '8px', background: 'rgba(16, 185, 129, 0.08)', borderRadius: '4px', overflow: 'hidden' }}>
+                  <div style={{ width: '100%', height: '8px', background: 'rgba(184, 144, 71, 0.08)', borderRadius: '4px', overflow: 'hidden' }}>
                     <div style={{
                       width: `${progress}%`,
                       height: '100%',
                       background: 'linear-gradient(to right, var(--primary), var(--secondary))',
                       transition: 'width 0.3s ease',
-                      boxShadow: '0 0 10px rgba(16, 185, 129, 0.3)'
+                      boxShadow: '0 0 10px rgba(184, 144, 71, 0.3)'
                     }} />
                   </div>
                 </div>
@@ -295,7 +295,7 @@ export default function ToolsShowcase() {
                 <div style={{
                   flexGrow: 1,
                   background: '#041b11',
-                  border: '1px solid rgba(16, 185, 129, 0.25)',
+                  border: '1px solid rgba(184, 144, 71, 0.25)',
                   borderRadius: '12px',
                   padding: '16px',
                   fontFamily: 'Courier New, monospace',
@@ -429,7 +429,7 @@ export default function ToolsShowcase() {
                 display: 'flex', 
                 flexDirection: 'column', 
                 justifyContent: 'space-between',
-                border: '1px solid rgba(16, 185, 129, 0.25)',
+                border: '1px solid rgba(184, 144, 71, 0.25)',
                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(240, 253, 244, 0.6) 100%)'
               }}>
                 <div style={{ textAlign: 'left' }}>
@@ -460,7 +460,7 @@ export default function ToolsShowcase() {
                         <span>Emails Delivered</span>
                         <span>{(subscribers * campaigns).toLocaleString()} (100%)</span>
                       </div>
-                      <div style={{ height: '6px', background: 'rgba(16, 185, 129, 0.08)', borderRadius: '3px' }}>
+                      <div style={{ height: '6px', background: 'rgba(184, 144, 71, 0.08)', borderRadius: '3px' }}>
                         <div style={{ width: '100%', height: '100%', background: 'var(--text-primary)', borderRadius: '3px' }} />
                       </div>
                     </div>
@@ -469,7 +469,7 @@ export default function ToolsShowcase() {
                         <span>Expected Opens</span>
                         <span>{emailOpens.toLocaleString()} ({Math.round(industryOpenRate * 100)}%)</span>
                       </div>
-                      <div style={{ height: '6px', background: 'rgba(16, 185, 129, 0.08)', borderRadius: '3px' }}>
+                      <div style={{ height: '6px', background: 'rgba(184, 144, 71, 0.08)', borderRadius: '3px' }}>
                         <div style={{ width: `${industryOpenRate * 100}%`, height: '100%', background: 'var(--primary)', borderRadius: '3px' }} />
                       </div>
                     </div>
@@ -478,7 +478,7 @@ export default function ToolsShowcase() {
                         <span>Conversions (1.5% purchases)</span>
                         <span>{emailConversions.toLocaleString()} ({Math.round(convRate * 100 * 10) / 10}%)</span>
                       </div>
-                      <div style={{ height: '6px', background: 'rgba(16, 185, 129, 0.08)', borderRadius: '3px' }}>
+                      <div style={{ height: '6px', background: 'rgba(184, 144, 71, 0.08)', borderRadius: '3px' }}>
                         <div style={{ width: `${(emailConversions / (subscribers * campaigns)) * 1000}%`, height: '100%', background: 'var(--secondary)', borderRadius: '3px' }} />
                       </div>
                     </div>
@@ -487,8 +487,8 @@ export default function ToolsShowcase() {
 
                 {/* Final Revenue */}
                 <div style={{
-                  background: 'rgba(16, 185, 129, 0.08)',
-                  border: '1px solid rgba(16, 185, 129, 0.2)',
+                  background: 'rgba(184, 144, 71, 0.08)',
+                  border: '1px solid rgba(184, 144, 71, 0.2)',
                   borderRadius: '16px',
                   padding: '24px',
                   textAlign: 'center'
@@ -501,7 +501,7 @@ export default function ToolsShowcase() {
                     color: 'var(--secondary)',
                     margin: '8px 0 0 0',
                     fontWeight: 800,
-                    textShadow: '0 0 20px rgba(16, 185, 129, 0.2)'
+                    textShadow: '0 0 20px rgba(184, 144, 71, 0.2)'
                   }}>
                     ${projectedRevenue.toLocaleString()}
                   </h2>
@@ -541,7 +541,7 @@ const inputStyle = {
   width: '100%',
   padding: '12px 16px',
   background: 'rgba(255, 255, 255, 0.55)',
-  border: '1px solid rgba(16, 185, 129, 0.15)',
+  border: '1px solid rgba(184, 144, 71, 0.15)',
   borderRadius: '8px',
   color: 'var(--text-primary)',
   outline: 'none',
@@ -554,7 +554,7 @@ const selectStyle = {
   width: '100%',
   padding: '12px',
   background: 'rgba(255, 255, 255, 0.75)',
-  border: '1px solid rgba(16, 185, 129, 0.15)',
+  border: '1px solid rgba(184, 144, 71, 0.15)',
   borderRadius: '8px',
   color: 'var(--text-primary)',
   outline: 'none',
@@ -565,7 +565,7 @@ const btnFileStyle = {
   display: 'inline-block',
   padding: '10px 18px',
   background: 'rgba(255, 255, 255, 0.5)',
-  border: '1px solid rgba(16, 185, 129, 0.15)',
+  border: '1px solid rgba(184, 144, 71, 0.15)',
   borderRadius: '6px',
   fontSize: '0.8rem',
   fontWeight: 600,
@@ -576,7 +576,7 @@ const btnFileStyle = {
 
 const counterCardStyle = {
   background: 'rgba(255, 255, 255, 0.4)',
-  border: '1px solid rgba(16, 185, 129, 0.12)',
+  border: '1px solid rgba(184, 144, 71, 0.12)',
   borderRadius: '8px',
   padding: '12px',
   display: 'flex',
@@ -586,7 +586,7 @@ const counterCardStyle = {
 
 const statCardStyle = {
   background: 'rgba(255, 255, 255, 0.4)',
-  border: '1px solid rgba(16, 185, 129, 0.12)',
+  border: '1px solid rgba(184, 144, 71, 0.12)',
   borderRadius: '8px',
   padding: '10px 4px',
   display: 'flex',

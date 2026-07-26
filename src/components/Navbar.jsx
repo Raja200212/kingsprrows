@@ -20,12 +20,12 @@ export default function Navbar() {
       position: 'sticky',
       top: 0,
       zIndex: 100,
-      background: scrolled ? 'rgba(255, 255, 255, 0.55)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(16px)' : 'none',
-      WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.5)' : '1px solid transparent',
+      background: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.96)',
+      backdropFilter: 'blur(16px)',
+      WebkitBackdropFilter: 'blur(16px)',
+      borderBottom: '1px solid rgba(13, 34, 64, 0.08)',
       transition: 'all 0.3s ease',
-      padding: '16px 0'
+      padding: '12px 0'
     }}>
       <div className="container" style={{
         display: 'flex',
@@ -36,23 +36,13 @@ export default function Navbar() {
         <Link to="/" style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
-          textDecoration: 'none',
-          color: 'var(--text-primary)',
-          fontFamily: 'var(--heading)',
-          fontWeight: 800,
-          fontSize: '1.4rem'
+          textDecoration: 'none'
         }}>
-          <img src={logoImg} alt="KingSparrow Emblem" style={{
-            height: '36px',
-            width: '36px',
-            borderRadius: '50%',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            border: '1.5px solid rgba(16, 185, 129, 0.4)',
-            boxShadow: '0 0 10px rgba(16, 185, 129, 0.2)'
+          <img src={logoImg} alt="KingSparrow Logo" style={{
+            height: '55px',
+            width: 'auto',
+            objectFit: 'contain'
           }} />
-          <span>King<span className="text-gradient-purple">Sparrow</span></span>
         </Link>
 
         {/* Desktop Links */}
@@ -62,7 +52,7 @@ export default function Navbar() {
           alignItems: 'center'
         }} className="desktop-nav">
           <Link to="/" style={linkStyle}>Home</Link>
-          <Link to="/about" style={linkStyle}>About</Link>
+          <Link to="/about" style={linkStyle}>About Us</Link>
           <Link to="/services" style={linkStyle}>Services</Link>
           <Link to="/case-studies" style={linkStyle}>Case Studies</Link>
           <Link to="/industries" style={linkStyle}>Industries</Link>
@@ -70,8 +60,8 @@ export default function Navbar() {
           <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
           <Link to="/blog" style={linkStyle}>Blog</Link>
 
-          <Link to="/contact" className="btn btn-secondary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
-            Get Quote
+          <Link to="/contact" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
+            Get In Touch <ArrowRight size={14} />
           </Link>
         </nav>
 
@@ -110,7 +100,7 @@ export default function Navbar() {
           zIndex: 99
         }}>
           <Link to="/" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Home</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About Us</Link>
           <Link to="/services" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Services</Link>
           <Link to="/case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Case Studies</Link>
           <Link to="/industries" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Industries</Link>
@@ -118,7 +108,7 @@ export default function Navbar() {
           <Link to="/portfolio" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Portfolio</Link>
           <Link to="/blog" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Blog</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%' }}>
-            Get Quote <ArrowRight size={16} />
+            Get In Touch <ArrowRight size={16} />
           </Link>
         </div>
       )}
@@ -159,5 +149,5 @@ const mobileLinkStyle = {
   fontSize: '1.1rem',
   fontWeight: '600',
   padding: '8px 0',
-  borderBottom: '1px solid rgba(16, 185, 129, 0.1)'
+  borderBottom: '1px solid rgba(184, 144, 71, 0.1)'
 };
