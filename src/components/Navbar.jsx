@@ -62,18 +62,21 @@ export default function Navbar() {
           alignItems: 'center'
         }} className="desktop-nav">
           <Link to="/" style={linkStyle}>Home</Link>
+          <Link to="/about" style={linkStyle}>About</Link>
           <Link to="/services" style={linkStyle}>Services</Link>
+          <Link to="/case-studies" style={linkStyle}>Case Studies</Link>
+          <Link to="/industries" style={linkStyle}>Industries</Link>
           <Link to="/pricing" style={linkStyle}>Pricing</Link>
           <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
           <Link to="/blog" style={linkStyle}>Blog</Link>
-          <Link to="/about" style={linkStyle}>About</Link>
+
           <Link to="/contact" className="btn btn-secondary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
             Get Quote
           </Link>
         </nav>
 
         {/* Mobile Action Button */}
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
           style={{
             background: 'none',
@@ -107,11 +110,13 @@ export default function Navbar() {
           zIndex: 99
         }}>
           <Link to="/" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Home</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
           <Link to="/services" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Services</Link>
+          <Link to="/case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Case Studies</Link>
+          <Link to="/industries" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Industries</Link>
           <Link to="/pricing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Pricing</Link>
           <Link to="/portfolio" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Portfolio</Link>
           <Link to="/blog" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Blog</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="btn btn-primary" style={{ width: '100%' }}>
             Get Quote <ArrowRight size={16} />
           </Link>

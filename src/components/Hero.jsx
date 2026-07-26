@@ -133,41 +133,43 @@ export default function Hero() {
         {/* Left Side: Content */}
         <div className="reveal active" style={{ display: 'flex', flexDirection: 'column', gap: '24px', textAlign: 'left' }}>
           <div className="badge" style={{ alignSelf: 'flex-start' }}>
-            ✨ All-in-One Digital Growth Partner
+            ✨ Your Technology Partner for Business Growth
           </div>
-          <h1>
-            Accelerate Growth. <br />
-            <span className="text-gradient">Scale Your Brand.</span>
+          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: '1.15' }}>
+            Grow Your Business with <br />
+            <span className="text-gradient">Digital Marketing</span> & <br />
+            <span className="text-gradient-purple">Custom Software</span>
           </h1>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '540px' }}>
-            We combine high-performance <strong style={{ color: 'var(--text-primary)' }}>Digital Marketing</strong> (SEO, SMM, GMB) with premium <strong style={{ color: 'var(--text-primary)' }}>Software Development</strong> & custom marketing tools to multiply your revenue.
+          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '560px', lineHeight: '1.5' }}>
+            We help businesses increase leads, improve online visibility, and automate operations through high-converting SEO, Google Ads, Meta Ads, custom websites, mobile apps, CRM systems, and custom software development.
           </p>
           
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '8px' }}>
-            <a href="#pricing" className="btn btn-primary">
-              View Packages <ArrowRight size={18} />
+            <a href="/contact" className="btn btn-primary">
+              Get Free Consultation <ArrowRight size={16} />
             </a>
-            <a href="#services" className="btn btn-secondary">
-              Explore Services
+            <a href="/portfolio" className="btn btn-secondary">
+              View Our Portfolio
             </a>
           </div>
 
           {/* Stats Bar */}
-          <div className="stats-grid">
+          <div className="stats-grid" style={{ marginTop: '32px' }}>
             <div>
-              <h3 style={{ fontSize: '2rem', color: 'var(--secondary)' }}>99.2%</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Client Retention Rate</p>
+              <h3 style={{ fontSize: '1.8rem', color: 'var(--secondary)' }}>100+</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Projects Completed</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '2rem', color: 'var(--primary)' }}>12M+</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Marketing Messages Sent</p>
+              <h3 style={{ fontSize: '1.8rem', color: 'var(--primary)' }}>50+</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Happy Clients</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '2rem', color: 'var(--primary)' }}>4.9★</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Clutch & G2 Rating</p>
+              <h3 style={{ fontSize: '1.8rem', color: 'var(--primary)' }}>5+</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Years of Experience</p>
             </div>
           </div>
         </div>
+
 
         {/* Right Side: Interactive Animated Dashboard */}
         <div style={{

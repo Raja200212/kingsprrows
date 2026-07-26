@@ -17,6 +17,10 @@ import GoogleBusiness from './pages/GoogleBusiness';
 import WebDevelopment from './pages/WebDevelopment';
 import WhatsappMarketing from './pages/WhatsappMarketing';
 import BlogDetail from './pages/BlogDetail';
+import CaseStudies from './pages/CaseStudies';
+import Industries from './pages/Industries';
+
+
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -84,7 +88,11 @@ function App() {
           <Route path="/google-business-profile" element={<GoogleBusiness />} />
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/whatsapp-marketing" element={<WhatsappMarketing />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/industries" element={<Industries />} />
         </Routes>
+
+
       </main>
 
       {/* Professional Footer & Floating WhatsApp Chat Widget */}

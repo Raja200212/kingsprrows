@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, ArrowRight, ArrowLeft, Send, Sparkles, Building, BarChart4 } from 'lucide-react';
+import { Check, ArrowRight, ArrowLeft, Send, BarChart4 } from 'lucide-react';
 
 export default function GrowthEstimator() {
   const [step, setStep] = useState(1);
