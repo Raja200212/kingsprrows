@@ -20,6 +20,7 @@ import WhatsappMarketing from './pages/WhatsappMarketing';
 import BlogDetail from './pages/BlogDetail';
 import CaseStudies from './pages/CaseStudies';
 import Industries from './pages/Industries';
+import DynamicSeoPage from './pages/DynamicSeoPage';
 
 
 
@@ -92,6 +93,7 @@ function App() {
           <Route path="/whatsapp-marketing" element={<WhatsappMarketing />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/:slug" element={<DynamicSeoPage />} />
         </Routes>
 
 

@@ -151,15 +151,15 @@ export default function Hero() {
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(2.4rem, 4.5vw, 4rem)',
-              lineHeight: '1.1',
+              fontSize: 'clamp(2.2rem, 4.2vw, 3.8rem)',
+              lineHeight: '1.15',
               fontWeight: '800',
               color: 'var(--text-primary)',
               margin: '8px 0 0 0'
             }}>
-              We Create. <br />
-              We Build. <br />
-              We <span style={{ color: 'var(--primary)' }}>Elevate</span> Brands.
+              Best Digital Marketing & <br />
+              Software Development <br />
+              Company in <span style={{ color: 'var(--primary)' }}>Dindigul</span>
             </h1>
 
             <p style={{

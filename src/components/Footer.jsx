@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Zap, MessageCircle, X, ChevronRight, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Send, Zap, MessageCircle, X, ChevronRight, Mail, Phone, MapPin, Globe, ChevronDown, ChevronUp } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ export default function Footer() {
   const [showChat, setShowChat] = useState(false);
   const [chatMessage, setChatMessage] = useState('');
   const [chatSent, setChatSent] = useState(false);
+  const [showDirectory, setShowDirectory] = useState(false);
 
   // Handle WhatsApp Widget Click / Message Send
   const handleChatSubmit = (e) => {
@@ -62,6 +63,20 @@ export default function Footer() {
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
             Empowering modern businesses with high-converting SEO marketing campaigns, WhatsApp broadcast software, and custom desktop and mobile-responsive website portals.
           </p>
+          <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
+            <a href="https://facebook.com/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+              <FacebookIcon size={16} />
+            </a>
+            <a href="https://instagram.com/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+              <InstagramIcon size={16} />
+            </a>
+            <a href="https://twitter.com/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
+              <TwitterIcon size={16} />
+            </a>
+            <a href="https://linkedin.com/company/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+              <LinkedinIcon size={16} />
+            </a>
+          </div>
         </div>
 
         {/* Col 2: Services Quick Links */}
@@ -95,6 +110,94 @@ export default function Footer() {
           <div style={contactItemStyle}><Globe size={14} style={{ color: 'var(--text-muted)' }} /> <span>www.kingsparrows.in</span></div>
         </div>
 
+      </div>
+
+      {/* Collapsible Site Directory for SEO */}
+      <div className="container" style={{
+        borderTop: '1px solid rgba(184, 144, 71, 0.12)',
+        paddingTop: '20px',
+        paddingBottom: '10px',
+        marginTop: '20px',
+        textAlign: 'left'
+      }}>
+        <button 
+          type="button"
+          onClick={() => setShowDirectory(!showDirectory)}
+          style={{
+            background: 'transparent',
+            border: 'none',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            cursor: 'pointer',
+            padding: '10px 0',
+            color: 'var(--text-primary)',
+            outline: 'none'
+          }}
+        >
+          <span style={{ fontSize: '0.9rem', fontWeight: '800', letterSpacing: '0.03em', textTransform: 'uppercase', color: 'var(--text-primary)' }}>
+            Our Network & Solutions Directory
+          </span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.82rem', color: 'var(--primary)', fontWeight: '750' }}>
+            {showDirectory ? 'Hide Directory' : 'Show Directory'}
+            {showDirectory ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          </span>
+        </button>
+
+        <div style={{
+          display: showDirectory ? 'block' : 'none',
+          marginTop: '20px'
+        }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: '24px',
+            paddingBottom: '20px'
+          }}>
+            <div>
+              <h5 style={dirHeaderStyle}>Dindigul Services</h5>
+              <ul style={dirListStyle}>
+                <li><Link to="/digital-marketing-company-dindigul" style={dirLinkStyle}>Digital Marketing Dindigul</Link></li>
+                <li><Link to="/seo-company-dindigul" style={dirLinkStyle}>SEO Company Dindigul</Link></li>
+                <li><Link to="/google-ads-agency-dindigul" style={dirLinkStyle}>Google Ads Agency Dindigul</Link></li>
+                <li><Link to="/web-development-company-dindigul" style={dirLinkStyle}>Web Development Dindigul</Link></li>
+                <li><Link to="/software-development-company-dindigul" style={dirLinkStyle}>Software Company Dindigul</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 style={dirHeaderStyle}>Regional Offices</h5>
+              <ul style={dirListStyle}>
+                <li><Link to="/digital-marketing-company-madurai" style={dirLinkStyle}>Digital Marketing Madurai</Link></li>
+                <li><Link to="/seo-company-madurai" style={dirLinkStyle}>SEO Services Madurai</Link></li>
+                <li><Link to="/digital-marketing-company-karur" style={dirLinkStyle}>Digital Marketing Karur</Link></li>
+                <li><Link to="/seo-company-karur" style={dirLinkStyle}>SEO Services Karur</Link></li>
+                <li><Link to="/digital-marketing-company-trichy" style={dirLinkStyle}>Digital Marketing Trichy</Link></li>
+                <li><Link to="/seo-company-trichy" style={dirLinkStyle}>SEO Services Trichy</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 style={dirHeaderStyle}>Industry Solutions</h5>
+              <ul style={dirListStyle}>
+                <li><Link to="/digital-marketing-healthcare" style={dirLinkStyle}>Healthcare Marketing</Link></li>
+                <li><Link to="/digital-marketing-real-estate" style={dirLinkStyle}>Real Estate Marketing</Link></li>
+                <li><Link to="/digital-marketing-construction" style={dirLinkStyle}>Construction Marketing</Link></li>
+                <li><Link to="/digital-marketing-schools" style={dirLinkStyle}>Schools & Colleges</Link></li>
+                <li><Link to="/digital-marketing-doctors" style={dirLinkStyle}>Branding for Doctors</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 style={dirHeaderStyle}>Custom Software</h5>
+              <ul style={dirListStyle}>
+                <li><Link to="/crm-software-development" style={dirLinkStyle}>CRM Systems Development</Link></li>
+                <li><Link to="/erp-software-development" style={dirLinkStyle}>ERP Software Dev</Link></li>
+                <li><Link to="/construction-management-software" style={dirLinkStyle}>Construction Management</Link></li>
+                <li><Link to="/hospital-management-software" style={dirLinkStyle}>Hospital Software HMS</Link></li>
+                <li><Link to="/inventory-management-software" style={dirLinkStyle}>Inventory Stock Control</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Bar */}
@@ -296,6 +399,26 @@ export default function Footer() {
         .whatsapp-float-btn:hover {
           transform: scale(1.1);
         }
+        .social-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: rgba(13, 34, 64, 0.05);
+          color: var(--text-primary) !important;
+          text-decoration: none;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          border: 1px solid rgba(13, 34, 64, 0.08);
+        }
+        .social-link:hover {
+          background: var(--primary);
+          color: #ffffff !important;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 16px rgba(184, 144, 71, 0.3);
+          border-color: var(--primary);
+        }
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
@@ -345,3 +468,102 @@ const contactItemStyle = {
   fontSize: '0.85rem',
   color: 'var(--text-secondary)'
 };
+
+const dirHeaderStyle = {
+  fontSize: '0.8rem',
+  fontWeight: '700',
+  color: 'var(--text-primary)',
+  textTransform: 'uppercase',
+  letterSpacing: '0.05em',
+  marginBottom: '12px'
+};
+
+const dirListStyle = {
+  listStyle: 'none',
+  padding: 0,
+  margin: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '8px'
+};
+
+const dirLinkStyle = {
+  fontSize: '0.78rem',
+  color: 'var(--text-muted)',
+  textDecoration: 'none',
+  transition: 'color 0.2s',
+  display: 'inline-block'
+};
+
+// Custom SVG Icons for Social Links to bypass older Lucide package limitations
+const FacebookIcon = ({ size = 16, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const InstagramIcon = ({ size = 16, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
+const TwitterIcon = ({ size = 16, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+  </svg>
+);
+
+const LinkedinIcon = ({ size = 16, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);

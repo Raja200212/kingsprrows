@@ -1,9 +1,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   Check, Megaphone, Code, Layout, Smartphone, Palette, 
   Search, Target, Share2, Award, MessageCircle, Database, ArrowRight 
 } from 'lucide-react';
+
+function getServiceSeoLink(title) {
+  switch (title) {
+    case "Digital Marketing":
+      return "/digital-marketing-company-dindigul";
+    case "Software Development":
+      return "/software-development-company-dindigul";
+    case "Web Development":
+      return "/web-development-company-dindigul";
+    case "Mobile App Development":
+      return "/mobile-app-development-dindigul";
+    case "Search Engine Optimization (SEO)":
+      return "/seo-company-dindigul";
+    case "Google Ads Management":
+      return "/google-ads-agency-dindigul";
+    case "Meta Ads (Facebook & Instagram)":
+      return "/meta-ads-agency-dindigul";
+    case "Social Media Marketing":
+      return "/social-media-marketing-dindigul";
+    case "Branding":
+      return "/branding-company-dindigul";
+    default:
+      return null;
+  }
+}
 
 export default function ServicesPage() {
   const servicesList = [
@@ -300,6 +326,27 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
+
+                {/* View Detailed Service Page Link */}
+                {getServiceSeoLink(service.title) && (
+                  <div style={{ marginTop: '16px', textAlign: 'right' }}>
+                    <Link 
+                      to={getServiceSeoLink(service.title)} 
+                      style={{ 
+                        color: 'var(--primary)', 
+                        textDecoration: 'none', 
+                        fontSize: '0.82rem', 
+                        fontWeight: '700',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px'
+                      }}
+                      className="service-detail-link"
+                    >
+                      Explore Dindigul Services <ArrowRight size={12} />
+                    </Link>
+                  </div>
+                )}
 
               </div>
             ))}
