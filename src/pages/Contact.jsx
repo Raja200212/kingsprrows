@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, MapPin, Globe, Send, ShieldCheck, Phone, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Globe, Send, ShieldCheck, Phone, MessageCircle, ExternalLink } from 'lucide-react';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -61,7 +61,7 @@ export default function Contact() {
               ) : (
                 <>
                   <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }} htmlFor="form-name">Name</label>
                       <input 
                         type="text" 
@@ -176,9 +176,32 @@ export default function Contact() {
 
           {/* Interactive Google Map embed */}
           <div className="glass-card reveal active" style={{ marginTop: '40px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textAlign: 'left' }}>
-              <MapPin size={20} style={{ color: '#ef4444' }} /> Locate KingSparrow Office
-            </h3>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)', textAlign: 'left', margin: 0 }}>
+                <MapPin size={20} style={{ color: '#ef4444' }} /> Locate KingSparrow Office
+              </h3>
+              <a 
+                href="https://www.google.com/maps/@10.348112,78.0020157,3a,75y,173.22h,85.09t/data=!3m7!1e1!3m5!1sCttqR3UDSKRp1GPNU17hPw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D4.914906292364904%26panoid%3DCttqR3UDSKRp1GPNU17hPw%26yaw%3D173.220213730626!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-secondary"
+                style={{
+                  padding: '8px 18px',
+                  fontSize: '0.85rem',
+                  borderRadius: '9999px',
+                  border: '1px solid rgba(184, 144, 71, 0.3)',
+                  background: 'transparent',
+                  color: 'var(--text-primary)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s'
+                }}
+              >
+                <span>View Street View</span> <ExternalLink size={14} />
+              </a>
+            </div>
             <div style={{ 
               overflow: 'hidden', 
               borderRadius: '16px', 
@@ -189,12 +212,12 @@ export default function Contact() {
               boxShadow: '0 8px 24px rgba(13, 34, 64, 0.02)'
             }}>
               <iframe 
-                src="https://maps.google.com/maps?q=Dindigul%20Bypass%20Road,%20Tamil%20Nadu,%20India&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=10.348112,78.0020157&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen="" 
-                loading="lazy"
+                loading="lazy" 
                 title="Google Maps location of KingSparrow"
               />
             </div>

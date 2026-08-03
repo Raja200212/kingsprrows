@@ -99,8 +99,8 @@ export default function DynamicSeoPage() {
   };
 
   // Determine local coordinate points for Google LocalBusiness Schema
-  let latitude = "10.3673";
-  let longitude = "77.9803";
+  let latitude = "10.348112";
+  let longitude = "78.0020157";
   let addressLocality = "Dindigul";
   let addressRegion = "Tamil Nadu";
   let streetAddress = "Dindigul Bypass Road";

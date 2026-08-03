@@ -67,13 +67,13 @@ export default function Footer() {
             <a href="https://facebook.com/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
               <FacebookIcon size={16} />
             </a>
-            <a href="https://instagram.com/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/kingsparrow_official/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
               <InstagramIcon size={16} />
             </a>
             <a href="https://twitter.com/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
               <TwitterIcon size={16} />
             </a>
-            <a href="https://linkedin.com/company/kingsparrows" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/king-sparrows-a167a5426/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
               <LinkedinIcon size={16} />
             </a>
           </div>
