@@ -45,9 +45,16 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Us | KingSparrow Digital Marketing & Software Development</title>
+        <title>About Kingsparrows | Our Digital Marketing &amp; Software Journey</title>
         <meta name="description" content="Discover the story, mission, vision, core values, and technical expertise of KingSparrow, a leading digital marketing and custom software agency." />
         <link rel="canonical" href="https://www.kingsparrows.in/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Kingsparrows | Our Digital Marketing &amp; Software Journey" />
+        <meta property="og:description" content="Discover the story, mission, vision, core values, and technical expertise of KingSparrow, a leading digital marketing and custom software agency." />
+        <meta property="og:url" content="https://www.kingsparrows.in/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Kingsparrows | Our Digital Marketing &amp; Software Journey" />
+        <meta name="twitter:description" content="Discover the story, mission, vision, core values, and technical expertise of KingSparrow, a leading digital marketing and custom software agency." />
       </Helmet>
 
       <section style={{ padding: '120px 0 60px 0', minHeight: '80vh' }}>

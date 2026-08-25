@@ -202,6 +202,13 @@ export default function DynamicSeoPage() {
         <meta name="description" content={data.description} />
         <link rel="canonical" href={`https://www.kingsparrows.in/${data.slug}`} />
         <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={data.title} />
+        <meta property="og:description" content={data.description} />
+        <meta property="og:url" content={`https://www.kingsparrows.in/${data.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data.title} />
+        <meta name="twitter:description" content={data.description} />
         
         {/* Inject JSON-LD Schema scripts */}
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

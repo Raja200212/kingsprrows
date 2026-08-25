@@ -221,9 +221,16 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Our Services | SEO, SMM, Web & CRM Software Development</title>
+        <title>Digital Marketing &amp; Software Development Services | Kingsparrows</title>
         <meta name="description" content="KingSparrow offers digital marketing &amp; software services including Web Development, Mobile Apps, SEO, Google &amp; Meta Ads, and CRM Development." />
         <link rel="canonical" href="https://www.kingsparrows.in/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Digital Marketing &amp; Software Development Services | Kingsparrows" />
+        <meta property="og:description" content="KingSparrow offers digital marketing &amp; software services including Web Development, Mobile Apps, SEO, Google &amp; Meta Ads, and CRM Development." />
+        <meta property="og:url" content="https://www.kingsparrows.in/services" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Marketing &amp; Software Development Services | Kingsparrows" />
+        <meta name="twitter:description" content="KingSparrow offers digital marketing &amp; software services including Web Development, Mobile Apps, SEO, Google &amp; Meta Ads, and CRM Development." />
       </Helmet>
 
       <section style={{ padding: '120px 0 80px 0', minHeight: '85vh' }}>
