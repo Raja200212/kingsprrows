@@ -222,7 +222,7 @@ export default function ServicesPage() {
     <>
       <Helmet>
         <title>Our Services | SEO, SMM, Web & CRM Software Development</title>
-        <meta name="description" content="KingSparrow offers end-to-end digital marketing and software development services including Web Development, Mobile Apps, SEO, Google/Meta Ads, and CRM Development." />
+        <meta name="description" content="KingSparrow offers digital marketing &amp; software services including Web Development, Mobile Apps, SEO, Google &amp; Meta Ads, and CRM Development." />
         <link rel="canonical" href="https://www.kingsparrows.in/services" />
       </Helmet>
 

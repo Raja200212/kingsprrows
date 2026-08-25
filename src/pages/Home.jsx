@@ -94,7 +94,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Best Digital Marketing Company in Dindigul | Kingsprrow</title>
-        <meta name="description" content="Kingsprrow is a leading digital marketing and software development company in Dindigul offering SEO, Google Ads, Meta Ads, website development, mobile apps, CRM, and branding." />
+        <meta name="description" content="Kingsprrow is a top digital marketing &amp; software development company in Dindigul offering SEO, Google Ads, Meta Ads, web &amp; app development, CRM, and branding." />
         <link rel="canonical" href="https://www.kingsparrows.in/" />
       </Helmet>
 
