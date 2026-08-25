@@ -20,28 +20,28 @@ const baseTemplate = fs.readFileSync(templatePath, 'utf8');
 const staticRoutes = [
   {
     path: 'about',
-    title: 'About Kingsparrows | Our Digital Marketing & Software Journey',
+    title: 'About Kingsparrows | Digital Marketing & Software Journey',
     description: 'Discover the story, mission, vision, core values, and technical expertise of KingSparrow, a leading digital marketing and custom software agency.',
     canonical: 'https://www.kingsparrows.in/about',
     h1: 'About KingSparrow Digital Marketing & Software Agency'
   },
   {
     path: 'services',
-    title: 'Digital Marketing & Software Development Services | Kingsparrows',
+    title: 'Digital Marketing & Software Services | Kingsparrows',
     description: 'KingSparrow offers digital marketing & software services including Web Development, Mobile Apps, SEO, Google & Meta Ads, and CRM Development.',
     canonical: 'https://www.kingsparrows.in/services',
     h1: 'Digital Marketing & Custom Software Development Services'
   },
   {
     path: 'pricing',
-    title: 'Affordable Digital Marketing & Software Pricing | Kingsparrows',
+    title: 'Digital Marketing & Software Pricing | Kingsparrows',
     description: 'Transparent pricing plans, interactive campaign growth calculators, and a free instant website SEO audit tool by KingSparrow.',
     canonical: 'https://www.kingsparrows.in/pricing',
     h1: 'Transparent Pricing Plans & Growth Calculators'
   },
   {
     path: 'portfolio',
-    title: 'Kingsparrows Portfolio | Our Digital Marketing & Software Projects',
+    title: 'Kingsparrows Portfolio | Digital Marketing & Software Projects',
     description: 'View our portfolio of custom React websites, Electron desktop applications, WhatsApp bulk tools, and search engine optimization case studies.',
     canonical: 'https://www.kingsparrows.in/portfolio',
     h1: 'Our Client Work, Software Apps & Digital Marketing Campaigns'

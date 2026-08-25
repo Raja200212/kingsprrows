@@ -8,15 +8,15 @@ export default function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Affordable Digital Marketing &amp; Software Pricing | Kingsparrows</title>
+        <title>Digital Marketing &amp; Software Pricing | Kingsparrows</title>
         <meta name="description" content="Transparent pricing plans, interactive campaign growth calculators, and a free instant website SEO audit tool by KingSparrow." />
         <link rel="canonical" href="https://www.kingsparrows.in/pricing" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Affordable Digital Marketing &amp; Software Pricing | Kingsparrows" />
+        <meta property="og:title" content="Digital Marketing &amp; Software Pricing | Kingsparrows" />
         <meta property="og:description" content="Transparent pricing plans, interactive campaign growth calculators, and a free instant website SEO audit tool by KingSparrow." />
         <meta property="og:url" content="https://www.kingsparrows.in/pricing" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Affordable Digital Marketing &amp; Software Pricing | Kingsparrows" />
+        <meta name="twitter:title" content="Digital Marketing &amp; Software Pricing | Kingsparrows" />
         <meta name="twitter:description" content="Transparent pricing plans, interactive campaign growth calculators, and a free instant website SEO audit tool by KingSparrow." />
       </Helmet>
 
