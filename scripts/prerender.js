@@ -14,7 +14,23 @@ if (!fs.existsSync(templatePath)) {
   process.exit(1);
 }
 
-const baseTemplate = fs.readFileSync(templatePath, 'utf8');
+let baseTemplate = fs.readFileSync(templatePath, 'utf8');
+
+// Inline compiled CSS to eliminate render-blocking CSS requests completely
+const assetsDir = path.resolve(distDir, 'assets');
+if (fs.existsSync(assetsDir)) {
+  const cssFiles = fs.readdirSync(assetsDir).filter(file => file.endsWith('.css'));
+  if (cssFiles.length > 0) {
+    const cssPath = path.resolve(assetsDir, cssFiles[0]);
+    const cssContent = fs.readFileSync(cssPath, 'utf8');
+    baseTemplate = baseTemplate.replace(
+      /<link rel="stylesheet"[^>]*href="\/assets\/[^"]+\.css"[^>]*>/i,
+      `<style>${cssContent}</style>`
+    );
+    // Write inlined CSS back to main dist/index.html template
+    fs.writeFileSync(templatePath, baseTemplate, 'utf8');
+  }
+}
 
 // Define static routes with custom titles, descriptions, and canonicals
 const staticRoutes = [
