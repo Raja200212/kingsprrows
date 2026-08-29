@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, PenTool, Megaphone, Code, TrendingUp, Target, BarChart3 } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -63,58 +63,77 @@ export default function Hero() {
     };
     window.addEventListener('resize', handleResize);
 
-    const drawConnections = () => {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+    let lastTime = 0;
 
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(184, 144, 71, ${0.12 * (1 - dist / 120)})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
-          }
-        }
-      }
-    };
+    const animate = (time) => {
+      animationFrameId = requestAnimationFrame(animate);
 
-    const animate = () => {
+      // Throttle canvas animation to ~30 FPS to save CPU main-thread work
+      if (time - lastTime < 33) return;
+      lastTime = time;
+
       ctx.clearRect(0, 0, width, height);
 
-      // Slow moving mesh grid pattern in background
+      // Fast batched mesh grid pattern
+      ctx.beginPath();
       ctx.strokeStyle = 'rgba(184, 144, 71, 0.015)';
       ctx.lineWidth = 0.5;
       const gridSize = 40;
       for (let x = 0; x < width; x += gridSize) {
-        ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, height);
-        ctx.stroke();
       }
       for (let y = 0; y < height; y += gridSize) {
-        ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(width, y);
-        ctx.stroke();
       }
+      ctx.stroke();
 
+      // Update & draw particles
       particles.forEach((p) => {
         p.update();
         p.draw();
       });
 
-      drawConnections();
-      animationFrameId = requestAnimationFrame(animate);
+      // Batched particle connection drawing with squared distance calculation
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(184, 144, 71, 0.08)';
+      ctx.lineWidth = 0.8;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distSq = dx * dx + dy * dy;
+
+          if (distSq < 14400) {
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+          }
+        }
+      }
+      ctx.stroke();
     };
 
-    animate();
+    // Pause animation when hero is off-screen
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        if (!animationFrameId) {
+          lastTime = performance.now();
+          animate(lastTime);
+        }
+      } else {
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = null;
+        }
+      }
+    }, { threshold: 0.05 });
+
+    observer.observe(canvas);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      observer.disconnect();
       window.removeEventListener('resize', handleResize);
     };
   }, []);

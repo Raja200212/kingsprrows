@@ -326,9 +326,10 @@ section {
 .liquid-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.55;
-  animation: floatBlob 25s infinite alternate, morphBlob 18s infinite alternate;
+  filter: blur(80px);
+  opacity: 0.45;
+  will-change: transform;
+  animation: floatBlob 25s infinite alternate ease-in-out;
 }
 
 .blob-1 {
