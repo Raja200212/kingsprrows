@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, PenTool, Megaphone, Code, TrendingUp, Target, BarChart3 } from 'lucide-react';
-import logoImg from '../assets/logo.webp';
+import logoImg from '../assets/logo.png';
 
 export default function Hero() {
   const canvasRef = useRef(null);
