@@ -263,6 +263,10 @@ export default function Hero() {
                   <img 
                     src={logoImg} 
                     alt="Kingsparrow Logo" 
+                    fetchPriority="high"
+                    loading="eager"
+                    width="180"
+                    height="170"
                     style={{
                       maxWidth: '90%',
                       maxHeight: '90%',

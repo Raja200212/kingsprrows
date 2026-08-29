@@ -53,7 +53,7 @@ export default function Footer() {
             fontWeight: 800,
             fontSize: '1.3rem'
           }}>
-          <img src={logoImg} alt="KingSparrow Emblem" style={{
+          <img src={logoImg} alt="KingSparrow Emblem" loading="lazy" width="32" height="32" style={{
             height: '32px',
             width: 'auto',
             objectFit: 'contain'

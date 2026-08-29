@@ -47,7 +47,7 @@ export default function Navbar() {
           textDecoration: 'none',
           gap: '10px'
         }}>
-          <img src={logoImg} alt="KingSparrow Logo" className="header-logo" />
+          <img src={logoImg} alt="KingSparrow Logo" className="header-logo" fetchPriority="high" loading="eager" width="42" height="42" />
           <span style={{
             fontSize: '1.3rem',
             fontWeight: 800,
