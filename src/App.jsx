@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import OnboardingPopup from './components/OnboardingPopup';
 
 // Pages
 import Home from './pages/Home';
@@ -63,7 +62,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <OnboardingPopup />
       
       {/* Liquid Background Blobs */}
       <div className="liquid-blob-container">
