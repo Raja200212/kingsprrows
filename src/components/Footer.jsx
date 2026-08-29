@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Zap, MessageCircle, X, ChevronRight, Mail, Phone, MapPin, Globe, ChevronDown, ChevronUp } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, PenTool, Megaphone, Code, TrendingUp, Target, BarChart3 } from 'lucide-react';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -11,8 +11,12 @@ export default function Hero() {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
 
-    let width = (canvas.width = canvas.offsetWidth);
-    let height = (canvas.height = canvas.offsetHeight);
+    const initialWidth = canvas.clientWidth || 300;
+    const initialHeight = canvas.clientHeight || 150;
+    canvas.width = initialWidth;
+    canvas.height = initialHeight;
+    let width = initialWidth;
+    let height = initialHeight;
 
     const particles = [];
     const particleCount = Math.min(40, Math.floor((width * height) / 25000));
@@ -48,8 +52,14 @@ export default function Hero() {
 
     const handleResize = () => {
       if (!canvas) return;
-      width = canvas.width = canvas.offsetWidth;
-      height = canvas.height = canvas.offsetHeight;
+      const nw = canvas.clientWidth;
+      const nh = canvas.clientHeight;
+      if (nw && nh) {
+        canvas.width = nw;
+        canvas.height = nh;
+        width = nw;
+        height = nh;
+      }
     };
     window.addEventListener('resize', handleResize);
 
